@@ -521,3 +521,50 @@ Started GET "/assets/users-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 a
 
 
 Started GET "/assets/application-c030fd008d439d284143eb512ecd0569.js?body=1" for ::1 at 2015-03-28 15:50:03 -0400
+
+
+Started GET "/" for ::1 at 2015-03-28 16:58:10 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (2.1ms)
+  [1m[35mUser Load (30.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered layouts/_header.html.erb (47.8ms)
+Completed 200 OK in 828ms (Views: 781.6ms | ActiveRecord: 30.4ms)
+
+
+Started GET "/" for ::1 at 2015-03-28 16:58:12 -0400
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered layouts/_header.html.erb (1.1ms)
+Completed 200 OK in 97ms (Views: 95.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/custom-d54420b249d7ab047f9aa5bf976ad8af.css?body=1" for ::1 at 2015-03-28 16:58:12 -0400
+
+
+Started GET "/assets/application-6b6e7908be656160a2e9b21bbb4eeab5.css?body=1" for ::1 at 2015-03-28 16:58:12 -0400
+
+
+Started GET "/assets/users-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-28 16:58:12 -0400
+
+
+Started GET "/assets/static_pages-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-28 16:58:12 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-28 16:58:12 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-28 16:58:12 -0400
+
+
+Started GET "/assets/turbolinks-d9dcd5206ee131f11181e8ca09537148.js?body=1" for ::1 at 2015-03-28 16:58:12 -0400
+
+
+Started GET "/assets/static_pages-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-28 16:58:12 -0400
+
+
+Started GET "/assets/users-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-28 16:58:12 -0400
+
+
+Started GET "/assets/application-908b7465bef82ddf00ca775496b1fa4b.js?body=1" for ::1 at 2015-03-28 16:58:12 -0400
