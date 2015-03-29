@@ -156,4 +156,27 @@ background-color: rgba(0,0,0,0.5);
 	position:absolute;top:20%;z-index:1000;left:15%;display:none;text-align:center;padding-top:40px;
 	font-size:14px
 }
+
+.usericon{
+	width: 50px;
+	height: 50px;
+	border-radius: 25px;
+	-webkit-border-radius: 25px;
+	-moz-border-radius: 25px;
+	background-position:center;
+	background-repeat:no-repeat;
+	float:left;
+	margin-right:10px
+}
+.small-usericon{
+	width: 20px;
+	height: 20px;
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	background-position:center;
+	background-repeat:no-repeat;
+	float:left;
+	margin-left:5px
+}
 /* new style sheet ends */

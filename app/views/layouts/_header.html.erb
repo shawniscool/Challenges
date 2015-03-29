@@ -2,6 +2,7 @@
   <div id="nav-right">
     <% if logged_in? %>
       <%= link_to "LOG OUT", logout_path, method: "delete" %>
+      <%= link_to "PROFILE", edit_user_path(current_user) %>
     <% else %>
       <%= link_to "SIGN UP", signup_path, id:"signup" %>
       <%= link_to "LOG IN", login_path, id:"login" %>

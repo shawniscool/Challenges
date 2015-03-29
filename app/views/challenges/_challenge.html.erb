@@ -1,5 +1,9 @@
+<div id="content">
 <div class="event">
-      <%= gravatar_for challenge.users.first %>
+      
+<div class="usericon" style= background:url(<%= gravatar_url challenge.users.first %>)>
+</div>
+      <%= link_to challenge.users.first.name, challenge.users.first %>
       <span class="event-detail"> <%= challenge.task %></span> 
       <div class="event-meta">
           <span class="money"><%= challenge.money %> </span>
@@ -7,6 +11,7 @@
           <span class="progress">Completed 3/20 days</span>
       </div>
       <% challenge.users.each do |user| %>
-        <%= gravatar_for user %>
+        <div class="small-usericon" style= background:url(<%= small_gravatar_url user %>)>
+        </div>
       <% end %>
-</div><div style="clear:both"></div><br><br>
+</div><div style="clear:both"></div><br><br></div>
