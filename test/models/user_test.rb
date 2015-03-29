@@ -19,4 +19,14 @@ class UserTest < ActiveSupport::TestCase
     @user.save
     assert_not duplicate_user.valid?
   end
+
+  test "should play and quit a challenge" do
+    michael = users(:michael)
+    orange = challenges(:orange)
+    assert_not michael.playing?(orange)
+    michael.join(orange)
+    assert michael.playing?(orange)
+    michael.quit(orange)
+    assert_not michael.playing?(orange)
+  end
 end

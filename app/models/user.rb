@@ -2,7 +2,6 @@ class User < ActiveRecord::Base
   has_many :challenges
   has_many :relationships, class_name: "Relationship", 
               foreign_key: "user_id",dependent: :destroy
-  
 	before_save { self.email = email.downcase }
 	validates :name,  presence: true, length: { maximum: 50 }
   	VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
@@ -14,6 +13,20 @@ class User < ActiveRecord::Base
     # Returns the hash digest of the given string.
     def feed
       Challenge.where('user_id = ?', id)
+    end
+
+    #joins a challenge
+    def join(challenge)
+      relationships.create(challenge_id: challenge.id)
+    end
+
+    #quits a challenge
+    def quit(challenge)
+      relationships.find_by(challenge_id: challenge.id)
+    end
+
+    def playing?(challenge)
+      challenges.include?(challenge)
     end
 
   def User.digest(string)
