@@ -9957,3 +9957,843 @@ Processing by StaticPagesController#home as HTML
   Rendered layouts/_footer.html.erb (0.0ms)
 Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.1ms)
   [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "challenges"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "challenges" ("title", "task", "created_at", "updated_at", "id", "user_id") VALUES ('aa', 'I just ate an orange!', '2015-03-29 06:11:47 UTC', '2015-03-29 06:21:47', 499495288, 762146111)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "challenges" ("title", "task", "created_at", "updated_at", "id", "user_id") VALUES ('aa', 'Check out the @tauday site by @mhartl: http://tauday.com', '2012-03-29 06:21:47 UTC', '2015-03-29 06:21:47', 517500819, 762146111)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "challenges" ("title", "task", "created_at", "updated_at", "id", "user_id") VALUES ('aa', 'Sad cats are sad: http://youtu.be/PKffm2uI4dk', '2015-03-29 04:21:47 UTC', '2015-03-29 06:21:47', 12348100, 762146111)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "challenges" ("title", "task", "created_at", "updated_at", "id", "user_id") VALUES ('aa', 'Oh, is that what you want? Because that''s how you get ants!', '2013-03-29 06:21:47 UTC', '2015-03-29 06:21:47', 583546149, 950961012)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "challenges" ("title", "task", "created_at", "updated_at", "id", "user_id") VALUES ('aa', 'Danger zone!', '2015-03-26 06:21:47 UTC', '2015-03-29 06:21:47', 552321033, 950961012)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "challenges" ("title", "task", "created_at", "updated_at", "id", "user_id") VALUES ('aa', 'I''m sorry. Your words made sense, but your sarcastic tone did not.', '2015-03-29 06:11:47 UTC', '2015-03-29 06:21:47', 3454773, 409608538)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "challenges" ("title", "task", "created_at", "updated_at", "id", "user_id") VALUES ('aa', 'Dude, this van''s, like, rolling probable cause.', '2015-03-29 02:21:47 UTC', '2015-03-29 06:21:47', 970054474, 409608538)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "challenges" ("title", "task", "created_at", "updated_at", "id", "user_id") VALUES ('aa', 'Writing a short test', '2015-03-29 06:21:47 UTC', '2015-03-29 06:21:47', 941832919, 762146111)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "relationships"
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Michael Example', 'michael@example.com', '$2a$04$zoGI5wl56IP2.K3FXao/8uIq5FVFNdDE70LbjlAigOcHYW2YzFfDC', '2015-03-29 06:21:47', '2015-03-29 06:21:47', 762146111)
+  [1m[36m (7.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------------------
+ChallengeTest: test_order_should_be_most_recent_first
+-----------------------------------------------------
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 762146111]]
+  [1m[35mChallenge Load (0.3ms)[0m  SELECT  "challenges".* FROM "challenges"  ORDER BY "challenges"."created_at" DESC LIMIT 1
+  [1m[36mChallenge Load (0.1ms)[0m  [1mSELECT  "challenges".* FROM "challenges" WHERE "challenges"."id" = ? LIMIT 1[0m  [["id", 941832919]]
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+-----------------------------------
+ChallengeTest: test_should_be_valid
+-----------------------------------
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 762146111]]
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+--------------------------------------------------------------------
+UsersLoginTest: test_login_with_valid_information_followed_by_logout
+--------------------------------------------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 762146111]]
+Started GET "/login" for 127.0.0.1 at 2015-03-29 02:21:48 -0400
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (11.4ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered layouts/_header.html.erb (1.8ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 74ms (Views: 63.6ms | ActiveRecord: 0.1ms)
+Started POST "/login" for 127.0.0.1 at 2015-03-29 02:21:48 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"session"=>{"email"=>"michael@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1[0m  [["email", "michael@example.com"]]
+Redirected to http://www.example.com/users/762146111
+Completed 302 Found in 4ms (ActiveRecord: 0.2ms)
+Started GET "/users/762146111" for 127.0.0.1 at 2015-03-29 02:21:48 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"762146111"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 762146111]]
+  [1m[36mChallenge Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "challenges" WHERE "challenges"."user_id" = ? LIMIT 1[0m  [["user_id", 762146111]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "challenges" WHERE "challenges"."user_id" = ?  [["user_id", 762146111]]
+  [1m[36mChallenge Load (0.1ms)[0m  [1mSELECT "challenges".* FROM "challenges" WHERE "challenges"."user_id" = ?  ORDER BY "challenges"."created_at" DESC[0m  [["user_id", 762146111]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 762146111]]
+  Rendered challenges/_challenge.html.erb (373.8ms)
+  Rendered users/show.html.erb within layouts/application (391.3ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 405ms (Views: 403.6ms | ActiveRecord: 0.5ms)
+Started DELETE "/logout" for 127.0.0.1 at 2015-03-29 02:21:48 -0400
+Processing by SessionsController#destroy as HTML
+Redirected to http://www.example.com/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/" for 127.0.0.1 at 2015-03-29 02:21:48 -0400
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered static_pages/home.html.erb within layouts/application (1.3ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 16ms (Views: 14.8ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-----------------------------------------------
+UserTest: test_email_addresses_should_be_unique
+-----------------------------------------------
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user@example.com') LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Example User"], ["email", "user@example.com"], ["password_digest", "$2a$04$NPkyjcs122v8kec.DghTpeiXouXfoWlleshrknTHAL8em3R7q1Cty"], ["created_at", "2015-03-29 06:21:48.611793"], ["updated_at", "2015-03-29 06:21:48.611793"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('USER@EXAMPLE.COM') LIMIT 1
+  [1m[36m (5.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+------------------------------
+UserTest: test_should_be_valid
+------------------------------
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user@example.com') LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-----------------------------------------------
+UserTest: test_should_play_and_quit_a_challenge
+-----------------------------------------------
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 762146111]]
+  [1m[36mChallenge Load (0.1ms)[0m  [1mSELECT  "challenges".* FROM "challenges" WHERE "challenges"."id" = ? LIMIT 1[0m  [["id", 499495288]]
+  [1m[35mChallenge Exists (0.1ms)[0m  SELECT "challenges".* FROM "challenges" WHERE "challenges"."user_id" = ? AND "challenges"."id" = ?  ORDER BY "challenges"."created_at" DESC  [["user_id", 762146111], ["id", 499495288]]
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------------
+StaticPagesControllerTest: test_should_get_home
+-----------------------------------------------
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered static_pages/home.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+--------------------------------------
+UsersProfileTest: test_profile_display
+--------------------------------------
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 762146111]]
+Started GET "/users/762146111" for 127.0.0.1 at 2015-03-29 02:21:48 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"762146111"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 762146111]]
+  [1m[35mChallenge Exists (0.1ms)[0m  SELECT  1 AS one FROM "challenges" WHERE "challenges"."user_id" = ? LIMIT 1  [["user_id", 762146111]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "challenges" WHERE "challenges"."user_id" = ?[0m  [["user_id", 762146111]]
+  [1m[35mChallenge Load (0.1ms)[0m  SELECT "challenges".* FROM "challenges" WHERE "challenges"."user_id" = ?  ORDER BY "challenges"."created_at" DESC  [["user_id", 762146111]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered challenges/_challenge.html.erb (3.7ms)
+  Rendered users/show.html.erb within layouts/application (7.1ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered layouts/_header.html.erb (8.4ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 18ms (Views: 16.6ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "challenges" WHERE "challenges"."user_id" = ?  [["user_id", 762146111]]
+  [1m[36mChallenge Load (0.1ms)[0m  [1mSELECT "challenges".* FROM "challenges" WHERE "challenges"."user_id" = ?  ORDER BY "challenges"."created_at" DESC[0m  [["user_id", 762146111]]
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+----------------------------------------
+UsersControllerTest: test_should_get_new
+----------------------------------------
+Processing by UsersController#new as HTML
+  Rendered shared/_error_messages.html.erb (0.6ms)
+  Rendered users/new.html.erb within layouts/application (8.3ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 14ms (Views: 13.3ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+------------------------------------------------
+UsersSignupTest: test_invalid_signup_information
+------------------------------------------------
+Started GET "/signup" for 127.0.0.1 at 2015-03-29 02:21:48 -0400
+Processing by UsersController#new as HTML
+  Rendered shared/_error_messages.html.erb (0.1ms)
+  Rendered users/new.html.erb within layouts/application (1.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 4ms (Views: 3.8ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users"
+Started POST "/users" for 127.0.0.1 at 2015-03-29 02:21:48 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"name"=>"", "email"=>"user@invalid", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user@invalid') LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  Rendered shared/_error_messages.html.erb (2.5ms)
+  Rendered users/new.html.erb within layouts/application (4.5ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 15ms (Views: 6.2ms | ActiveRecord: 0.4ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+----------------------------------------------
+UsersSignupTest: test_valid_signup_information
+----------------------------------------------
+Started GET "/signup" for 127.0.0.1 at 2015-03-29 02:21:48 -0400
+Processing by UsersController#new as HTML
+  Rendered shared/_error_messages.html.erb (0.1ms)
+  Rendered users/new.html.erb within layouts/application (2.0ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+Started POST "/users" for 127.0.0.1 at 2015-03-29 02:21:48 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"name"=>"Example User", "email"=>"user@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user@example.com') LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Example User"], ["email", "user@example.com"], ["password_digest", "$2a$04$45f/RcI/tXJJUOUiv82ucO9dx4IsIPPHoRU1rlWPDuPKMGQmIgNrq"], ["created_at", "2015-03-29 06:21:48.726432"], ["updated_at", "2015-03-29 06:21:48.726432"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/users/762146112
+Completed 302 Found in 5ms (ActiveRecord: 0.4ms)
+Started GET "/users/762146112" for 127.0.0.1 at 2015-03-29 02:21:48 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"762146112"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 762146112]]
+  [1m[36mChallenge Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "challenges" WHERE "challenges"."user_id" = ? LIMIT 1[0m  [["user_id", 762146112]]
+  Rendered users/show.html.erb within layouts/application (0.9ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 762146112]]
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (3.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-------------------------------------------
+SessionsControllerTest: test_should_get_new
+-------------------------------------------
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.6ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-------------------------------------------------------------------------
+ChallengesControllerTest: test_should_redirect_destroy_when_not_logged_in
+-------------------------------------------------------------------------
+  [1m[36mChallenge Load (0.1ms)[0m  [1mSELECT  "challenges".* FROM "challenges" WHERE "challenges"."id" = ? LIMIT 1[0m  [["id", 499495288]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "challenges"
+Processing by ChallengesController#destroy as HTML
+  Parameters: {"id"=>"499495288"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Redirected to http://test.host/login
+Filter chain halted as :logged_in_user rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "challenges"
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+--------------------------------------------------------------------------
+ChallengesControllerTest: test_should_redirect_destroy_for_wrong_challenge
+--------------------------------------------------------------------------
+  [1m[36mChallenge Load (0.1ms)[0m  [1mSELECT  "challenges".* FROM "challenges" WHERE "challenges"."id" = ? LIMIT 1[0m  [["id", 499495288]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 762146111]]
+  [1m[36mChallenge Load (0.0ms)[0m  [1mSELECT  "challenges".* FROM "challenges" WHERE "challenges"."id" = ? LIMIT 1[0m  [["id", 583546149]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "challenges"
+Processing by ChallengesController#destroy as HTML
+  Parameters: {"id"=>"583546149"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 762146111]]
+  [1m[35mChallenge Load (0.1ms)[0m  SELECT  "challenges".* FROM "challenges" WHERE "challenges"."user_id" = ? AND "challenges"."id" = ?  ORDER BY "challenges"."created_at" DESC LIMIT 1  [["user_id", 762146111], ["id", 583546149]]
+Redirected to http://test.host/
+Filter chain halted as :correct_user rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "challenges"[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+------------------------------------------------------------------------
+ChallengesControllerTest: test_should_redirect_create_when_not_logged_in
+------------------------------------------------------------------------
+  [1m[35mChallenge Load (0.1ms)[0m  SELECT  "challenges".* FROM "challenges" WHERE "challenges"."id" = ? LIMIT 1  [["id", 499495288]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "challenges"[0m
+Processing by ChallengesController#create as HTML
+  Parameters: {"challenge"=>{"task"=>"Lorem ipsum"}}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Redirected to http://test.host/login
+Filter chain halted as :logged_in_user rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "challenges"[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+-----------------------------------------------
+RelationshipTest: test_should_require_a_user_id
+-----------------------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+----------------------------------------------------
+RelationshipTest: test_should_require_a_challenge_id
+----------------------------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+--------------------------------------
+RelationshipTest: test_should_be_valid
+--------------------------------------
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "challenges"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "challenges" ("title", "task", "created_at", "updated_at", "id", "user_id") VALUES ('aa', 'I just ate an orange!', '2015-03-29 06:12:16 UTC', '2015-03-29 06:22:16', 499495288, 762146111)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "challenges" ("title", "task", "created_at", "updated_at", "id", "user_id") VALUES ('aa', 'Check out the @tauday site by @mhartl: http://tauday.com', '2012-03-29 06:22:16 UTC', '2015-03-29 06:22:16', 517500819, 762146111)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "challenges" ("title", "task", "created_at", "updated_at", "id", "user_id") VALUES ('aa', 'Sad cats are sad: http://youtu.be/PKffm2uI4dk', '2015-03-29 04:22:16 UTC', '2015-03-29 06:22:16', 12348100, 762146111)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "challenges" ("title", "task", "created_at", "updated_at", "id", "user_id") VALUES ('aa', 'Oh, is that what you want? Because that''s how you get ants!', '2013-03-29 06:22:16 UTC', '2015-03-29 06:22:16', 583546149, 950961012)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "challenges" ("title", "task", "created_at", "updated_at", "id", "user_id") VALUES ('aa', 'Danger zone!', '2015-03-26 06:22:16 UTC', '2015-03-29 06:22:16', 552321033, 950961012)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "challenges" ("title", "task", "created_at", "updated_at", "id", "user_id") VALUES ('aa', 'I''m sorry. Your words made sense, but your sarcastic tone did not.', '2015-03-29 06:12:16 UTC', '2015-03-29 06:22:16', 3454773, 409608538)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "challenges" ("title", "task", "created_at", "updated_at", "id", "user_id") VALUES ('aa', 'Dude, this van''s, like, rolling probable cause.', '2015-03-29 02:22:16 UTC', '2015-03-29 06:22:16', 970054474, 409608538)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "challenges" ("title", "task", "created_at", "updated_at", "id", "user_id") VALUES ('aa', 'Writing a short test', '2015-03-29 06:22:16 UTC', '2015-03-29 06:22:16', 941832919, 762146111)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "relationships"
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Michael Example', 'michael@example.com', '$2a$04$NtIi7mA/HwaqlTIChiO2wefZIDd8LZOx/DQZoKMQaTS/IeWE4Jz4i', '2015-03-29 06:22:16', '2015-03-29 06:22:16', 762146111)
+  [1m[36m (7.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------------
+StaticPagesControllerTest: test_should_get_home
+-----------------------------------------------
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered static_pages/home.html.erb within layouts/application (2.7ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered layouts/_header.html.erb (1.6ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 65ms (Views: 53.9ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+--------------------------------------
+RelationshipTest: test_should_be_valid
+--------------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+----------------------------------------------------
+RelationshipTest: test_should_require_a_challenge_id
+----------------------------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+-----------------------------------------------
+RelationshipTest: test_should_require_a_user_id
+-----------------------------------------------
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+------------------------------------------------
+UsersSignupTest: test_invalid_signup_information
+------------------------------------------------
+Started GET "/signup" for 127.0.0.1 at 2015-03-29 02:22:16 -0400
+Processing by UsersController#new as HTML
+  Rendered shared/_error_messages.html.erb (0.5ms)
+  Rendered users/new.html.erb within layouts/application (21.0ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered layouts/_header.html.erb (1.7ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 50ms (Views: 35.4ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+Started POST "/users" for 127.0.0.1 at 2015-03-29 02:22:17 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"name"=>"", "email"=>"user@invalid", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user@invalid') LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  Rendered shared/_error_messages.html.erb (4.7ms)
+  Rendered users/new.html.erb within layouts/application (8.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered layouts/_header.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 28ms (Views: 10.6ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "users"
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+----------------------------------------------
+UsersSignupTest: test_valid_signup_information
+----------------------------------------------
+Started GET "/signup" for 127.0.0.1 at 2015-03-29 02:22:17 -0400
+Processing by UsersController#new as HTML
+  Rendered shared/_error_messages.html.erb (0.1ms)
+  Rendered users/new.html.erb within layouts/application (2.6ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 5ms (Views: 4.8ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users"
+Started POST "/users" for 127.0.0.1 at 2015-03-29 02:22:17 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"name"=>"Example User", "email"=>"user@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user@example.com') LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Example User"], ["email", "user@example.com"], ["password_digest", "$2a$04$otFkz4bNjRV/ckfl2h.m9u6mq4Q7U4OAFwxORJ4Hs4FSM7sOiPxva"], ["created_at", "2015-03-29 06:22:17.110166"], ["updated_at", "2015-03-29 06:22:17.110166"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/users/762146112
+Completed 302 Found in 6ms (ActiveRecord: 0.5ms)
+Started GET "/users/762146112" for 127.0.0.1 at 2015-03-29 02:22:17 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"762146112"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 762146112]]
+  [1m[35mChallenge Exists (0.1ms)[0m  SELECT  1 AS one FROM "challenges" WHERE "challenges"."user_id" = ? LIMIT 1  [["user_id", 762146112]]
+  Rendered users/show.html.erb within layouts/application (4.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 762146112]]
+  Rendered layouts/_header.html.erb (10.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 33ms (Views: 18.7ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users"
+  [1m[36m (5.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+------------------------------------------------------------------------
+ChallengesControllerTest: test_should_redirect_create_when_not_logged_in
+------------------------------------------------------------------------
+  [1m[36mChallenge Load (0.2ms)[0m  [1mSELECT  "challenges".* FROM "challenges" WHERE "challenges"."id" = ? LIMIT 1[0m  [["id", 499495288]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "challenges"
+Processing by ChallengesController#create as HTML
+  Parameters: {"challenge"=>{"task"=>"Lorem ipsum"}}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Redirected to http://test.host/login
+Filter chain halted as :logged_in_user rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "challenges"
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+--------------------------------------------------------------------------
+ChallengesControllerTest: test_should_redirect_destroy_for_wrong_challenge
+--------------------------------------------------------------------------
+  [1m[36mChallenge Load (0.2ms)[0m  [1mSELECT  "challenges".* FROM "challenges" WHERE "challenges"."id" = ? LIMIT 1[0m  [["id", 499495288]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 762146111]]
+  [1m[36mChallenge Load (0.0ms)[0m  [1mSELECT  "challenges".* FROM "challenges" WHERE "challenges"."id" = ? LIMIT 1[0m  [["id", 583546149]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "challenges"
+Processing by ChallengesController#destroy as HTML
+  Parameters: {"id"=>"583546149"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 762146111]]
+  [1m[35mChallenge Load (0.1ms)[0m  SELECT  "challenges".* FROM "challenges" WHERE "challenges"."user_id" = ? AND "challenges"."id" = ?  ORDER BY "challenges"."created_at" DESC LIMIT 1  [["user_id", 762146111], ["id", 583546149]]
+Redirected to http://test.host/
+Filter chain halted as :correct_user rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "challenges"[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+-------------------------------------------------------------------------
+ChallengesControllerTest: test_should_redirect_destroy_when_not_logged_in
+-------------------------------------------------------------------------
+  [1m[35mChallenge Load (0.1ms)[0m  SELECT  "challenges".* FROM "challenges" WHERE "challenges"."id" = ? LIMIT 1  [["id", 499495288]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "challenges"[0m
+Processing by ChallengesController#destroy as HTML
+  Parameters: {"id"=>"499495288"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Redirected to http://test.host/login
+Filter chain halted as :logged_in_user rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "challenges"[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+--------------------------------------------------------------------
+UsersLoginTest: test_login_with_valid_information_followed_by_logout
+--------------------------------------------------------------------
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 762146111]]
+Started GET "/login" for 127.0.0.1 at 2015-03-29 02:22:17 -0400
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 15ms (Views: 14.2ms | ActiveRecord: 0.1ms)
+Started POST "/login" for 127.0.0.1 at 2015-03-29 02:22:17 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"session"=>{"email"=>"michael@example.com", "password"=>"[FILTERED]"}}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "michael@example.com"]]
+Redirected to http://www.example.com/users/762146111
+Completed 302 Found in 3ms (ActiveRecord: 0.1ms)
+Started GET "/users/762146111" for 127.0.0.1 at 2015-03-29 02:22:17 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"762146111"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 762146111]]
+  [1m[35mChallenge Exists (0.0ms)[0m  SELECT  1 AS one FROM "challenges" WHERE "challenges"."user_id" = ? LIMIT 1  [["user_id", 762146111]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "challenges" WHERE "challenges"."user_id" = ?[0m  [["user_id", 762146111]]
+  [1m[35mChallenge Load (0.1ms)[0m  SELECT "challenges".* FROM "challenges" WHERE "challenges"."user_id" = ?  ORDER BY "challenges"."created_at" DESC  [["user_id", 762146111]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 762146111]]
+  Rendered challenges/_challenge.html.erb (4.7ms)
+  Rendered users/show.html.erb within layouts/application (17.1ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 20ms (Views: 18.3ms | ActiveRecord: 0.4ms)
+Started DELETE "/logout" for 127.0.0.1 at 2015-03-29 02:22:17 -0400
+Processing by SessionsController#destroy as HTML
+Redirected to http://www.example.com/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/" for 127.0.0.1 at 2015-03-29 02:22:17 -0400
+Processing by StaticPagesController#home as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered static_pages/home.html.erb within layouts/application (0.4ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+----------------------------------------
+UsersControllerTest: test_should_get_new
+----------------------------------------
+Processing by UsersController#new as HTML
+  Rendered shared/_error_messages.html.erb (0.1ms)
+  Rendered users/new.html.erb within layouts/application (2.9ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 5ms (Views: 4.7ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+--------------------------------------
+UsersProfileTest: test_profile_display
+--------------------------------------
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 762146111]]
+Started GET "/users/762146111" for 127.0.0.1 at 2015-03-29 02:22:17 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"762146111"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 762146111]]
+  [1m[35mChallenge Exists (0.1ms)[0m  SELECT  1 AS one FROM "challenges" WHERE "challenges"."user_id" = ? LIMIT 1  [["user_id", 762146111]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "challenges" WHERE "challenges"."user_id" = ?[0m  [["user_id", 762146111]]
+  [1m[35mChallenge Load (0.1ms)[0m  SELECT "challenges".* FROM "challenges" WHERE "challenges"."user_id" = ?  ORDER BY "challenges"."created_at" DESC  [["user_id", 762146111]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered challenges/_challenge.html.erb (6.3ms)
+  Rendered users/show.html.erb within layouts/application (10.4ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 15ms (Views: 12.5ms | ActiveRecord: 0.8ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "challenges" WHERE "challenges"."user_id" = ?  [["user_id", 762146111]]
+  [1m[36mChallenge Load (0.1ms)[0m  [1mSELECT "challenges".* FROM "challenges" WHERE "challenges"."user_id" = ?  ORDER BY "challenges"."created_at" DESC[0m  [["user_id", 762146111]]
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-----------------------------------------------
+UserTest: test_should_play_and_quit_a_challenge
+-----------------------------------------------
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 762146111]]
+  [1m[36mChallenge Load (0.0ms)[0m  [1mSELECT  "challenges".* FROM "challenges" WHERE "challenges"."id" = ? LIMIT 1[0m  [["id", 499495288]]
+  [1m[35mChallenge Exists (0.2ms)[0m  SELECT "challenges".* FROM "challenges" WHERE "challenges"."user_id" = ? AND "challenges"."id" = ?  ORDER BY "challenges"."created_at" DESC  [["user_id", 762146111], ["id", 499495288]]
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+------------------------------
+UserTest: test_should_be_valid
+------------------------------
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user@example.com') LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+-----------------------------------------------
+UserTest: test_email_addresses_should_be_unique
+-----------------------------------------------
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user@example.com') LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Example User"], ["email", "user@example.com"], ["password_digest", "$2a$04$WrcDdnZpF4wgH9g3tTIVqO/1zG5kSn9bLwY/yoJeM0LYNif.cRGLe"], ["created_at", "2015-03-29 06:22:17.299736"], ["updated_at", "2015-03-29 06:22:17.299736"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('USER@EXAMPLE.COM') LIMIT 1
+  [1m[36m (5.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-------------------------------------------
+SessionsControllerTest: test_should_get_new
+-------------------------------------------
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-----------------------------------------------------
+ChallengeTest: test_order_should_be_most_recent_first
+-----------------------------------------------------
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 762146111]]
+  [1m[36mChallenge Load (0.2ms)[0m  [1mSELECT  "challenges".* FROM "challenges"  ORDER BY "challenges"."created_at" DESC LIMIT 1[0m
+  [1m[35mChallenge Load (0.0ms)[0m  SELECT  "challenges".* FROM "challenges" WHERE "challenges"."id" = ? LIMIT 1  [["id", 941832919]]
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+-----------------------------------
+ChallengeTest: test_should_be_valid
+-----------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 762146111]]
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (4.5ms)[0m  [1mDELETE FROM "challenges"[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "challenges" ("title", "task", "created_at", "updated_at", "id", "user_id") VALUES ('aa', 'I just ate an orange!', '2015-03-29 06:13:39 UTC', '2015-03-29 06:23:39', 499495288, 762146111)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "challenges" ("title", "task", "created_at", "updated_at", "id", "user_id") VALUES ('aa', 'Check out the @tauday site by @mhartl: http://tauday.com', '2012-03-29 06:23:39 UTC', '2015-03-29 06:23:39', 517500819, 762146111)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "challenges" ("title", "task", "created_at", "updated_at", "id", "user_id") VALUES ('aa', 'Sad cats are sad: http://youtu.be/PKffm2uI4dk', '2015-03-29 04:23:39 UTC', '2015-03-29 06:23:39', 12348100, 762146111)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "challenges" ("title", "task", "created_at", "updated_at", "id", "user_id") VALUES ('aa', 'Oh, is that what you want? Because that''s how you get ants!', '2013-03-29 06:23:39 UTC', '2015-03-29 06:23:39', 583546149, 950961012)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "challenges" ("title", "task", "created_at", "updated_at", "id", "user_id") VALUES ('aa', 'Danger zone!', '2015-03-26 06:23:39 UTC', '2015-03-29 06:23:39', 552321033, 950961012)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "challenges" ("title", "task", "created_at", "updated_at", "id", "user_id") VALUES ('aa', 'I''m sorry. Your words made sense, but your sarcastic tone did not.', '2015-03-29 06:13:39 UTC', '2015-03-29 06:23:39', 3454773, 409608538)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "challenges" ("title", "task", "created_at", "updated_at", "id", "user_id") VALUES ('aa', 'Dude, this van''s, like, rolling probable cause.', '2015-03-29 02:23:39 UTC', '2015-03-29 06:23:39', 970054474, 409608538)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "challenges" ("title", "task", "created_at", "updated_at", "id", "user_id") VALUES ('aa', 'Writing a short test', '2015-03-29 06:23:39 UTC', '2015-03-29 06:23:39', 941832919, 762146111)[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "relationships"
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Michael Example', 'michael@example.com', '$2a$04$y.tiTnPMrM.HVlW0mTfMHubXgJffTyWYZpSJQ1p57umQbK0/2NVqW', '2015-03-29 06:23:39', '2015-03-29 06:23:39', 762146111)
+  [1m[36m (6.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+------------------------------------------------
+UsersSignupTest: test_invalid_signup_information
+------------------------------------------------
+Started GET "/signup" for 127.0.0.1 at 2015-03-29 02:23:39 -0400
+Processing by UsersController#new as HTML
+  Rendered shared/_error_messages.html.erb (24.1ms)
+  Rendered users/new.html.erb within layouts/application (754.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered layouts/_header.html.erb (67.4ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 1506ms (Views: 1472.1ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users"
+Started POST "/users" for 127.0.0.1 at 2015-03-29 02:23:41 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"name"=>"", "email"=>"user@invalid", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user@invalid') LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  Rendered shared/_error_messages.html.erb (3.2ms)
+  Rendered users/new.html.erb within layouts/application (5.5ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 59ms (Views: 7.8ms | ActiveRecord: 0.4ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+----------------------------------------------
+UsersSignupTest: test_valid_signup_information
+----------------------------------------------
+Started GET "/signup" for 127.0.0.1 at 2015-03-29 02:23:41 -0400
+Processing by UsersController#new as HTML
+  Rendered shared/_error_messages.html.erb (0.1ms)
+  Rendered users/new.html.erb within layouts/application (2.1ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 4ms (Views: 3.9ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+Started POST "/users" for 127.0.0.1 at 2015-03-29 02:23:41 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"name"=>"Example User", "email"=>"user@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user@example.com') LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Example User"], ["email", "user@example.com"], ["password_digest", "$2a$04$zKvRS0bkaTt.tv8OwvrzouUR2a.5eL58WiJh3ET78zT7fZ2fzoojK"], ["created_at", "2015-03-29 06:23:41.462619"], ["updated_at", "2015-03-29 06:23:41.462619"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/users/762146112
+Completed 302 Found in 6ms (ActiveRecord: 0.5ms)
+Started GET "/users/762146112" for 127.0.0.1 at 2015-03-29 02:23:41 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"762146112"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 762146112]]
+  [1m[36mChallenge Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "challenges" WHERE "challenges"."user_id" = ? LIMIT 1[0m  [["user_id", 762146112]]
+  Rendered users/show.html.erb within layouts/application (6.7ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 762146112]]
+  Rendered layouts/_header.html.erb (1.7ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 49ms (Views: 22.1ms | ActiveRecord: 0.4ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (3.8ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-----------------------------------------------
+UserTest: test_should_play_and_quit_a_challenge
+-----------------------------------------------
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 762146111]]
+  [1m[36mChallenge Load (0.1ms)[0m  [1mSELECT  "challenges".* FROM "challenges" WHERE "challenges"."id" = ? LIMIT 1[0m  [["id", 499495288]]
+  [1m[35mChallenge Exists (0.2ms)[0m  SELECT "challenges".* FROM "challenges" WHERE "challenges"."user_id" = ? AND "challenges"."id" = ?  ORDER BY "challenges"."created_at" DESC  [["user_id", 762146111], ["id", 499495288]]
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------------
+UserTest: test_email_addresses_should_be_unique
+-----------------------------------------------
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user@example.com') LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Example User"], ["email", "user@example.com"], ["password_digest", "$2a$04$i1RGz5tRedWi03dSj/nxRuTACgA6j/gvGA3vgyJNSaun0BYeaTKRO"], ["created_at", "2015-03-29 06:23:41.540926"], ["updated_at", "2015-03-29 06:23:41.540926"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('USER@EXAMPLE.COM') LIMIT 1[0m
+  [1m[35m (53.3ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+------------------------------
+UserTest: test_should_be_valid
+------------------------------
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('user@example.com') LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+-----------------------------------------------------
+ChallengeTest: test_order_should_be_most_recent_first
+-----------------------------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 762146111]]
+  [1m[35mChallenge Load (0.2ms)[0m  SELECT  "challenges".* FROM "challenges"  ORDER BY "challenges"."created_at" DESC LIMIT 1
+  [1m[36mChallenge Load (0.1ms)[0m  [1mSELECT  "challenges".* FROM "challenges" WHERE "challenges"."id" = ? LIMIT 1[0m  [["id", 941832919]]
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+-----------------------------------
+ChallengeTest: test_should_be_valid
+-----------------------------------
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 762146111]]
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+--------------------------------------
+UsersProfileTest: test_profile_display
+--------------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 762146111]]
+Started GET "/users/762146111" for 127.0.0.1 at 2015-03-29 02:23:41 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"762146111"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 762146111]]
+  [1m[36mChallenge Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "challenges" WHERE "challenges"."user_id" = ? LIMIT 1[0m  [["user_id", 762146111]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "challenges" WHERE "challenges"."user_id" = ?  [["user_id", 762146111]]
+  [1m[36mChallenge Load (0.1ms)[0m  [1mSELECT "challenges".* FROM "challenges" WHERE "challenges"."user_id" = ?  ORDER BY "challenges"."created_at" DESC[0m  [["user_id", 762146111]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered challenges/_challenge.html.erb (8.5ms)
+  Rendered users/show.html.erb within layouts/application (34.7ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 38ms (Views: 36.3ms | ActiveRecord: 0.6ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "challenges" WHERE "challenges"."user_id" = ?[0m  [["user_id", 762146111]]
+  [1m[35mChallenge Load (0.1ms)[0m  SELECT "challenges".* FROM "challenges" WHERE "challenges"."user_id" = ?  ORDER BY "challenges"."created_at" DESC  [["user_id", 762146111]]
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+--------------------------------------------------------------------
+UsersLoginTest: test_login_with_valid_information_followed_by_logout
+--------------------------------------------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 762146111]]
+Started GET "/login" for 127.0.0.1 at 2015-03-29 02:23:41 -0400
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.8ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 33ms (Views: 32.9ms | ActiveRecord: 0.1ms)
+Started POST "/login" for 127.0.0.1 at 2015-03-29 02:23:41 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"session"=>{"email"=>"michael@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1[0m  [["email", "michael@example.com"]]
+Redirected to http://www.example.com/users/762146111
+Completed 302 Found in 3ms (ActiveRecord: 0.1ms)
+Started GET "/users/762146111" for 127.0.0.1 at 2015-03-29 02:23:41 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"762146111"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 762146111]]
+  [1m[36mChallenge Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "challenges" WHERE "challenges"."user_id" = ? LIMIT 1[0m  [["user_id", 762146111]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "challenges" WHERE "challenges"."user_id" = ?  [["user_id", 762146111]]
+  [1m[36mChallenge Load (0.1ms)[0m  [1mSELECT "challenges".* FROM "challenges" WHERE "challenges"."user_id" = ?  ORDER BY "challenges"."created_at" DESC[0m  [["user_id", 762146111]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 762146111]]
+  Rendered challenges/_challenge.html.erb (3.5ms)
+  Rendered users/show.html.erb within layouts/application (6.2ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 9ms (Views: 7.5ms | ActiveRecord: 0.3ms)
+Started DELETE "/logout" for 127.0.0.1 at 2015-03-29 02:23:41 -0400
+Processing by SessionsController#destroy as HTML
+Redirected to http://www.example.com/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/" for 127.0.0.1 at 2015-03-29 02:23:41 -0400
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered static_pages/home.html.erb within layouts/application (1.5ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 29ms (Views: 27.7ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+------------------------------------------------------------------------
+ChallengesControllerTest: test_should_redirect_create_when_not_logged_in
+------------------------------------------------------------------------
+  [1m[35mChallenge Load (0.2ms)[0m  SELECT  "challenges".* FROM "challenges" WHERE "challenges"."id" = ? LIMIT 1  [["id", 499495288]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "challenges"[0m
+Processing by ChallengesController#create as HTML
+  Parameters: {"challenge"=>{"task"=>"Lorem ipsum"}}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Redirected to http://test.host/login
+Filter chain halted as :logged_in_user rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "challenges"[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+--------------------------------------------------------------------------
+ChallengesControllerTest: test_should_redirect_destroy_for_wrong_challenge
+--------------------------------------------------------------------------
+  [1m[35mChallenge Load (0.1ms)[0m  SELECT  "challenges".* FROM "challenges" WHERE "challenges"."id" = ? LIMIT 1  [["id", 499495288]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 762146111]]
+  [1m[35mChallenge Load (0.0ms)[0m  SELECT  "challenges".* FROM "challenges" WHERE "challenges"."id" = ? LIMIT 1  [["id", 583546149]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "challenges"[0m
+Processing by ChallengesController#destroy as HTML
+  Parameters: {"id"=>"583546149"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 762146111]]
+  [1m[36mChallenge Load (0.1ms)[0m  [1mSELECT  "challenges".* FROM "challenges" WHERE "challenges"."user_id" = ? AND "challenges"."id" = ?  ORDER BY "challenges"."created_at" DESC LIMIT 1[0m  [["user_id", 762146111], ["id", 583546149]]
+Redirected to http://test.host/
+Filter chain halted as :correct_user rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "challenges"
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+-------------------------------------------------------------------------
+ChallengesControllerTest: test_should_redirect_destroy_when_not_logged_in
+-------------------------------------------------------------------------
+  [1m[36mChallenge Load (0.1ms)[0m  [1mSELECT  "challenges".* FROM "challenges" WHERE "challenges"."id" = ? LIMIT 1[0m  [["id", 499495288]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "challenges"
+Processing by ChallengesController#destroy as HTML
+  Parameters: {"id"=>"499495288"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Redirected to http://test.host/login
+Filter chain halted as :logged_in_user rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "challenges"
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------------
+StaticPagesControllerTest: test_should_get_home
+-----------------------------------------------
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered static_pages/home.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+----------------------------------------
+UsersControllerTest: test_should_get_new
+----------------------------------------
+Processing by UsersController#new as HTML
+  Rendered shared/_error_messages.html.erb (0.1ms)
+  Rendered users/new.html.erb within layouts/application (2.4ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 4ms (Views: 4.0ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-------------------------------------------
+SessionsControllerTest: test_should_get_new
+-------------------------------------------
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.7ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-----------------------------------------------
+RelationshipTest: test_should_require_a_user_id
+-----------------------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+--------------------------------------
+RelationshipTest: test_should_be_valid
+--------------------------------------
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+----------------------------------------------------
+RelationshipTest: test_should_require_a_challenge_id
+----------------------------------------------------
+  [1m[35m (0.0ms)[0m  rollback transaction

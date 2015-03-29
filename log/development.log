@@ -22521,3 +22521,5 @@ Started GET "/assets/static_pages-64e62ddc273c2f5847f30d698ca14b67.css?body=1" f
 
 
 Started GET "/assets/application-26c3ffea8654c13e8f86c5389db0ba35.css?body=1" for ::1 at 2015-03-29 01:34:14 -0400
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mChallenge Load (0.5ms)[0m  SELECT "challenges".* FROM "challenges" WHERE "challenges"."user_id" = ?  ORDER BY "challenges"."created_at" DESC  [["user_id", 1]]
