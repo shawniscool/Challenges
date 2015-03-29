@@ -15,13 +15,35 @@ $('#sidebar-a').click(function () {
 $('#exit').click(function () {
    $('#sidebar').hide();
    $('#exit').hide();
+   $('#add-pop').hide();
 });
+$('#add').click(function () {
+   $('#exit').show();
+   $('#add-pop').show();
+});
+
 });
 </script>
 
 </head>
 
 <body>
+<!-- add begins -->
+<div class="event" id="add-pop">
+
+    <form class="new_challenge" id="new_challenge" action="/challenges" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="Fmi8DXWj0Sa5l+UbeRzrjqHK/nbudnZZipJtI+I69Y6AGWbAnD08MhfGLvpwQfCZ4XoyV+y/XeGfXBD1CgUhag==" />
+      <input placeholder="Title" type="text" name="challenge[title]" id="challenge_title" />
+<br/>
+      <input placeholder="Challenge description" type="text" name="challenge[task]" id="challenge_task" />
+<br/>End date<br/>
+      <input type="date" name="challenge[endDate]" id="challenge_endDate"/>
+<br/>
+      <input step="any" placeholder="Money amount" type="number" name="challenge[money]" id="challenge_money" />
+<br/>
+      <input type="submit" name="commit" value="Create my challenge" class="btn btn-primary" />
+</form>
+</div>
+<!-- add ends -->
 <!-- header begins -->
 	<!-- side bar begins -->
 		<div id="sidebar">
