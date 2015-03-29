@@ -1,1 +1,10 @@
 <%= @user.name %>, <%= @user.email %>
+<div class="col-md-8">
+    <% if @user.challenges.any? %>
+      <h3>Challenges (<%= @user.challenges.count %>)</h3>
+      <ol class="challenges">
+        <%= render @challenges %>
+      </ol>
+      <!-- <%= @challenges %> -->
+    <% end %>
+  </div>
