@@ -3,6 +3,8 @@
   <span class="user"><%= link_to challenge.user.name, challenge.user %></span>
   <span class="title"><%= challenge.title %></span>
   <span class="task"><%= challenge.task %></span>
+  <span>End Date is <%= challenge.endDate %> </span>
+  <span>Amount is <%= challenge.money %> </span>
   <span class="timestamp">
     Posted <%= time_ago_in_words(challenge.created_at) %> ago.
     <% if current_user?(challenge.user) %>
