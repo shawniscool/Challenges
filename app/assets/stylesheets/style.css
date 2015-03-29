@@ -1,0 +1,152 @@
+/*By Henry*/
+
+/* CSS Document */
+
+html, body{
+	padding:0;
+	color:black;
+	font-family: 'Open Sans', sans-serif;
+	font-size:14px;
+	margin:0;
+	width:100%;
+	height:100%;
+	font-weight:300;
+	background:white;
+}
+a{
+	text-decoration:none
+}
+#log-in-sign-up{
+	width:313px;
+	height:344px;
+	position:fixed;
+	top:50%;
+	left:50%;
+	margin:-172px 0 0 -302px;
+	padding-left:295px;
+	background:url('right-glow.png') left top no-repeat;
+}
+#footer{
+	height:92px;
+	bottom:0;
+	position:fixed;
+	background:#333333;
+	width:100%;
+}
+#footer-logo{
+	background:url(bottom-logo.png) right top no-repeat;
+	float:right;
+	margin:28px 34px 0 0;
+	width:180px;
+	height:33px;
+}
+#footer a{
+	float:left;
+	margin:36px 0 0 29px;
+	color:white;
+	font-size:14px;
+}
+input{
+	border:1px #B9B9C8 solid;
+	border-radius:4px;
+	padding:4px 0 0 8px;
+	width:264px;
+	height:35px;
+	font-size:15px;
+	color:black;
+	margin-bottom:20px
+}
+.btn-primary{
+	cursor:pointer;
+	padding-bottom:4px;
+	color:white;
+	background-color:#3F9FDC;
+	border:1px #3F9FDC solid;
+}
+
+/*below for the index page*/
+#h-navbar{
+	width:100%;
+	height:50px;
+	background:white url(navbar.png) bottom repeat-x;
+	padding-top:18px
+}
+#logo{
+	background:url(logo.png);
+	width:180px;
+	height:25px;
+	display:block;
+	margin:0 0 0 27px;
+}
+#nav-right{
+	float:right;
+	margin-right:50px;
+}
+#nav-right a{
+	width:88px;
+	border-radius:5px;
+	height:25px;
+	float:right;
+	margin-left:18px;
+	text-align:center;
+	padding-top:9px;
+	font-size:12px
+}
+#signup{
+	background:#DDDDDD;
+	border:1px #DDDDDD solid;
+	color:black
+}
+#login{
+	background:#2C9DDE;
+	border:1px #2C9DDE solid;
+	color:white
+}
+#img{
+	height:262px;
+	width:100%;
+	text-align:center;
+	padding-top:148px;
+	text-align:center;
+	color:white;
+}
+.h1{
+	font-size:45px;
+	margin-bottom:16px;
+}
+.h2{
+	font-size:35px;
+}
+#content{
+	text-align:center;
+	padding-top:32px;
+	background:white;
+}
+.icondes{
+	margin:60px auto 0 auto;
+	width:745px;
+	margin-left:auto;
+	background:white;
+	text-align:center
+}
+.icondes-left{
+	width:321px;
+	float:left
+}
+.icondes-right{
+	width:321px;
+	float:right
+}
+#sign-up-bottom{
+	background:#3F9FDC;
+	text-align:center;
+	font-size:16px;
+	padding-top:13px;
+	height:35px;
+	color:white;
+	width:344px;
+	display:block;
+	margin:30px auto 30px auto;
+	border:1px #4DA1DA solid;
+	border-radius:8px
+}
