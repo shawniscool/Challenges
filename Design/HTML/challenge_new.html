@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Challenges</title>
+  <link rel="stylesheet" media="all" href="/assets/challenges-64e62ddc273c2f5847f30d698ca14b67.css?body=1" data-turbolinks-track="true" />
+<link rel="stylesheet" media="all" href="/assets/custom-046ab787394d92c3e738f03f40f0bb25.css?body=1" data-turbolinks-track="true" />
+<link rel="stylesheet" media="all" href="/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" data-turbolinks-track="true" />
+<link rel="stylesheet" media="all" href="/assets/static_pages-64e62ddc273c2f5847f30d698ca14b67.css?body=1" data-turbolinks-track="true" />
+<link rel="stylesheet" media="all" href="/assets/style-4b82963681b5d5a6eb45a21f1b293285.css?body=1" data-turbolinks-track="true" />
+<link rel="stylesheet" media="all" href="/assets/users-64e62ddc273c2f5847f30d698ca14b67.css?body=1" data-turbolinks-track="true" />
+<link rel="stylesheet" media="all" href="/assets/application-26c3ffea8654c13e8f86c5389db0ba35.css?body=1" data-turbolinks-track="true" />
+  <script src="/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" data-turbolinks-track="true"></script>
+<script src="/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" data-turbolinks-track="true"></script>
+<script src="/assets/turbolinks-d9dcd5206ee131f11181e8ca09537148.js?body=1" data-turbolinks-track="true"></script>
+<script src="/assets/challenges-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" data-turbolinks-track="true"></script>
+<script src="/assets/jquery.backstretch.min-24da6a9b44a290ea439c06ac282920cf.js?body=1" data-turbolinks-track="true"></script>
+<script src="/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" data-turbolinks-track="true"></script>
+<script src="/assets/static_pages-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" data-turbolinks-track="true"></script>
+<script src="/assets/users-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" data-turbolinks-track="true"></script>
+<script src="/assets/application-fe38e4b80df1c775ce374ac8edbd4a10.js?body=1" data-turbolinks-track="true"></script>
+  <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="tcU2fgnVHVmjk36Ih7jBf/3fAS+qizY3qzUwdGvLml0jtOyz4EvwTQ3CtWmO5dpovW/NDqhCHY+++02ig/ROuQ==" />
+</head>
+<body>
+    <header class="navbar navbar-fixed-top navbar-inverse">
+  <div class="container">
+    <a id="logo" href="/">sample app</a>
+    <nav>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/">Home</a></li>
+          <li><a href="#">Users</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              Account <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="/users/1">Profile</a></li>
+              <li><a href="/users/1/edit">Settings</a></li>
+              <li class="divider"></li>
+              <li>
+                <a rel="nofollow" data-method="delete" href="/logout">Log out</a>
+              </li>
+            </ul>
+          </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<h1>Create a new challenge</h1>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <form class="new_challenge" id="new_challenge" action="/challenges" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="Fmi8DXWj0Sa5l+UbeRzrjqHK/nbudnZZipJtI+I69Y6AGWbAnD08MhfGLvpwQfCZ4XoyV+y/XeGfXBD1CgUhag==" />
+      <input placeholder="Title" type="text" name="challenge[title]" id="challenge_title" />
+
+      <input placeholder="Challenge description" type="text" name="challenge[task]" id="challenge_task" />
+
+      <label for="challenge_end Date">End date</label>
+      <input type="date" name="challenge[endDate]" id="challenge_endDate" />
+
+      <input step="any" placeholder="Money amount" type="number" name="challenge[money]" id="challenge_money" />
+
+      <input type="submit" name="commit" value="Create my challenge" class="btn btn-primary" />
+</form>  </div>
+</div>
+<pre class="debug_dump">--- !ruby/hash:ActionController::Parameters
+controller: challenges
+action: new
+</pre>
+<div style="clear:both"></div>
+<div id="footer">
+	<a href="/">About</a>
+	<a href="/">Contact</a>
+	<a href="/">FAQs</a>
+	<a href="/">Sign Up</a>
+	<a href="/">Log In</a>
+	<div id="footer-logo"></div>
+<div style="clear:both"></div>
+</div>
+</body>
+</html>
