@@ -1,6 +1,7 @@
 class Relationship < ActiveRecord::Base
-	belongs_to :User
-	belongs_to :Challenge
+	belongs_to :user
+	belongs_to :challenge
+
 	validates :user_id, presence: true
 	validates :challenge_id, presence: true
 	

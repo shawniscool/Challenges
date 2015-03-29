@@ -7587,3 +7587,175 @@ Filter chain halted as :logged_in_user rendered or redirected
 Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
   [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "challenges"
   [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "challenges"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "challenges" ("title", "task", "created_at", "user", "updated_at", "id") VALUES ('aa', 'I just ate an orange!', '2015-03-29 08:25:19 UTC', 'michael', '2015-03-29 08:35:19', 499495288)
+SQLite3::SQLException: table challenges has no column named user: INSERT INTO "challenges" ("title", "task", "created_at", "user", "updated_at", "id") VALUES ('aa', 'I just ate an orange!', '2015-03-29 08:25:19 UTC', 'michael', '2015-03-29 08:35:19', 499495288)
+  [1m[36m (5.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "challenges"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "challenges" ("title", "task", "created_at", "user", "updated_at", "id") VALUES ('aa', 'I just ate an orange!', '2015-03-29 08:25:19 UTC', 'michael', '2015-03-29 08:35:19', 499495288)
+SQLite3::SQLException: table challenges has no column named user: INSERT INTO "challenges" ("title", "task", "created_at", "user", "updated_at", "id") VALUES ('aa', 'I just ate an orange!', '2015-03-29 08:25:19 UTC', 'michael', '2015-03-29 08:35:19', 499495288)
+  [1m[36m (5.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "challenges"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "challenges" ("title", "task", "created_at", "user", "updated_at", "id") VALUES ('aa', 'I just ate an orange!', '2015-03-29 08:25:19 UTC', 'michael', '2015-03-29 08:35:19', 499495288)
+SQLite3::SQLException: table challenges has no column named user: INSERT INTO "challenges" ("title", "task", "created_at", "user", "updated_at", "id") VALUES ('aa', 'I just ate an orange!', '2015-03-29 08:25:19 UTC', 'michael', '2015-03-29 08:35:19', 499495288)
+  [1m[36m (3.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "challenges"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "challenges" ("title", "task", "created_at", "user", "updated_at", "id") VALUES ('aa', 'I just ate an orange!', '2015-03-29 08:25:19 UTC', 'michael', '2015-03-29 08:35:19', 499495288)
+SQLite3::SQLException: table challenges has no column named user: INSERT INTO "challenges" ("title", "task", "created_at", "user", "updated_at", "id") VALUES ('aa', 'I just ate an orange!', '2015-03-29 08:25:19 UTC', 'michael', '2015-03-29 08:35:19', 499495288)
+  [1m[36m (3.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "challenges"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "challenges" ("title", "task", "created_at", "user", "updated_at", "id") VALUES ('aa', 'I just ate an orange!', '2015-03-29 08:25:19 UTC', 'michael', '2015-03-29 08:35:19', 499495288)
+SQLite3::SQLException: table challenges has no column named user: INSERT INTO "challenges" ("title", "task", "created_at", "user", "updated_at", "id") VALUES ('aa', 'I just ate an orange!', '2015-03-29 08:25:19 UTC', 'michael', '2015-03-29 08:35:19', 499495288)
+  [1m[36m (3.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "challenges"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "challenges" ("title", "task", "created_at", "user", "updated_at", "id") VALUES ('aa', 'I just ate an orange!', '2015-03-29 08:25:19 UTC', 'michael', '2015-03-29 08:35:19', 499495288)
+SQLite3::SQLException: table challenges has no column named user: INSERT INTO "challenges" ("title", "task", "created_at", "user", "updated_at", "id") VALUES ('aa', 'I just ate an orange!', '2015-03-29 08:25:19 UTC', 'michael', '2015-03-29 08:35:19', 499495288)
+  [1m[36m (3.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "challenges"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "challenges" ("title", "task", "created_at", "user", "updated_at", "id") VALUES ('aa', 'I just ate an orange!', '2015-03-29 08:25:19 UTC', 'michael', '2015-03-29 08:35:19', 499495288)
+SQLite3::SQLException: table challenges has no column named user: INSERT INTO "challenges" ("title", "task", "created_at", "user", "updated_at", "id") VALUES ('aa', 'I just ate an orange!', '2015-03-29 08:25:19 UTC', 'michael', '2015-03-29 08:35:19', 499495288)
+  [1m[36m (2.8ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "challenges"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "challenges" ("title", "task", "created_at", "user", "updated_at", "id") VALUES ('aa', 'I just ate an orange!', '2015-03-29 08:25:19 UTC', 'michael', '2015-03-29 08:35:19', 499495288)
+SQLite3::SQLException: table challenges has no column named user: INSERT INTO "challenges" ("title", "task", "created_at", "user", "updated_at", "id") VALUES ('aa', 'I just ate an orange!', '2015-03-29 08:25:19 UTC', 'michael', '2015-03-29 08:35:19', 499495288)
+  [1m[36m (6.8ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "challenges"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "challenges" ("title", "task", "created_at", "user", "updated_at", "id") VALUES ('aa', 'I just ate an orange!', '2015-03-29 08:25:19 UTC', 'michael', '2015-03-29 08:35:19', 499495288)
+SQLite3::SQLException: table challenges has no column named user: INSERT INTO "challenges" ("title", "task", "created_at", "user", "updated_at", "id") VALUES ('aa', 'I just ate an orange!', '2015-03-29 08:25:19 UTC', 'michael', '2015-03-29 08:35:19', 499495288)
+  [1m[36m (2.8ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "challenges"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "challenges" ("title", "task", "created_at", "user", "updated_at", "id") VALUES ('aa', 'I just ate an orange!', '2015-03-29 08:25:19 UTC', 'michael', '2015-03-29 08:35:19', 499495288)
+SQLite3::SQLException: table challenges has no column named user: INSERT INTO "challenges" ("title", "task", "created_at", "user", "updated_at", "id") VALUES ('aa', 'I just ate an orange!', '2015-03-29 08:25:19 UTC', 'michael', '2015-03-29 08:35:19', 499495288)
+  [1m[36m (3.6ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "challenges"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "challenges" ("title", "task", "created_at", "user", "updated_at", "id") VALUES ('aa', 'I just ate an orange!', '2015-03-29 08:25:19 UTC', 'michael', '2015-03-29 08:35:19', 499495288)
+SQLite3::SQLException: table challenges has no column named user: INSERT INTO "challenges" ("title", "task", "created_at", "user", "updated_at", "id") VALUES ('aa', 'I just ate an orange!', '2015-03-29 08:25:19 UTC', 'michael', '2015-03-29 08:35:19', 499495288)
+  [1m[36m (2.9ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "challenges"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "challenges" ("title", "task", "created_at", "user", "updated_at", "id") VALUES ('aa', 'I just ate an orange!', '2015-03-29 08:25:19 UTC', 'michael', '2015-03-29 08:35:19', 499495288)
+SQLite3::SQLException: table challenges has no column named user: INSERT INTO "challenges" ("title", "task", "created_at", "user", "updated_at", "id") VALUES ('aa', 'I just ate an orange!', '2015-03-29 08:25:19 UTC', 'michael', '2015-03-29 08:35:19', 499495288)
+  [1m[36m (2.8ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "challenges"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "challenges" ("title", "task", "created_at", "user", "updated_at", "id") VALUES ('aa', 'I just ate an orange!', '2015-03-29 08:25:19 UTC', 'michael', '2015-03-29 08:35:19', 499495288)
+SQLite3::SQLException: table challenges has no column named user: INSERT INTO "challenges" ("title", "task", "created_at", "user", "updated_at", "id") VALUES ('aa', 'I just ate an orange!', '2015-03-29 08:25:19 UTC', 'michael', '2015-03-29 08:35:19', 499495288)
+  [1m[36m (5.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "challenges"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "challenges" ("title", "task", "created_at", "user", "updated_at", "id") VALUES ('aa', 'I just ate an orange!', '2015-03-29 08:25:19 UTC', 'michael', '2015-03-29 08:35:19', 499495288)
+SQLite3::SQLException: table challenges has no column named user: INSERT INTO "challenges" ("title", "task", "created_at", "user", "updated_at", "id") VALUES ('aa', 'I just ate an orange!', '2015-03-29 08:25:19 UTC', 'michael', '2015-03-29 08:35:19', 499495288)
+  [1m[36m (3.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "challenges"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "challenges" ("title", "task", "created_at", "user", "updated_at", "id") VALUES ('aa', 'I just ate an orange!', '2015-03-29 08:25:19 UTC', 'michael', '2015-03-29 08:35:19', 499495288)
+SQLite3::SQLException: table challenges has no column named user: INSERT INTO "challenges" ("title", "task", "created_at", "user", "updated_at", "id") VALUES ('aa', 'I just ate an orange!', '2015-03-29 08:25:19 UTC', 'michael', '2015-03-29 08:35:19', 499495288)
+  [1m[36m (2.9ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "challenges"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "challenges" ("title", "task", "created_at", "user", "updated_at", "id") VALUES ('aa', 'I just ate an orange!', '2015-03-29 08:25:19 UTC', 'michael', '2015-03-29 08:35:19', 499495288)
+SQLite3::SQLException: table challenges has no column named user: INSERT INTO "challenges" ("title", "task", "created_at", "user", "updated_at", "id") VALUES ('aa', 'I just ate an orange!', '2015-03-29 08:25:19 UTC', 'michael', '2015-03-29 08:35:19', 499495288)
+  [1m[36m (3.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "challenges"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "challenges" ("title", "task", "created_at", "user", "updated_at", "id") VALUES ('aa', 'I just ate an orange!', '2015-03-29 08:25:19 UTC', 'michael', '2015-03-29 08:35:19', 499495288)
+SQLite3::SQLException: table challenges has no column named user: INSERT INTO "challenges" ("title", "task", "created_at", "user", "updated_at", "id") VALUES ('aa', 'I just ate an orange!', '2015-03-29 08:25:19 UTC', 'michael', '2015-03-29 08:35:19', 499495288)
+  [1m[36m (2.8ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "challenges"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "challenges" ("title", "task", "created_at", "user", "updated_at", "id") VALUES ('aa', 'I just ate an orange!', '2015-03-29 08:31:26 UTC', 'michael', '2015-03-29 08:41:26', 499495288)
+SQLite3::SQLException: table challenges has no column named user: INSERT INTO "challenges" ("title", "task", "created_at", "user", "updated_at", "id") VALUES ('aa', 'I just ate an orange!', '2015-03-29 08:31:26 UTC', 'michael', '2015-03-29 08:41:26', 499495288)
+  [1m[36m (5.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "challenges"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "challenges" ("title", "task", "created_at", "user", "updated_at", "id") VALUES ('aa', 'I just ate an orange!', '2015-03-29 08:31:26 UTC', 'michael', '2015-03-29 08:41:26', 499495288)
+SQLite3::SQLException: table challenges has no column named user: INSERT INTO "challenges" ("title", "task", "created_at", "user", "updated_at", "id") VALUES ('aa', 'I just ate an orange!', '2015-03-29 08:31:26 UTC', 'michael', '2015-03-29 08:41:26', 499495288)
+  [1m[36m (2.9ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "challenges"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "challenges" ("title", "task", "created_at", "user", "updated_at", "id") VALUES ('aa', 'I just ate an orange!', '2015-03-29 08:31:26 UTC', 'michael', '2015-03-29 08:41:26', 499495288)
+SQLite3::SQLException: table challenges has no column named user: INSERT INTO "challenges" ("title", "task", "created_at", "user", "updated_at", "id") VALUES ('aa', 'I just ate an orange!', '2015-03-29 08:31:26 UTC', 'michael', '2015-03-29 08:41:26', 499495288)
+  [1m[36m (2.9ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "challenges"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "challenges" ("title", "task", "created_at", "user", "updated_at", "id") VALUES ('aa', 'I just ate an orange!', '2015-03-29 08:31:26 UTC', 'michael', '2015-03-29 08:41:26', 499495288)
+SQLite3::SQLException: table challenges has no column named user: INSERT INTO "challenges" ("title", "task", "created_at", "user", "updated_at", "id") VALUES ('aa', 'I just ate an orange!', '2015-03-29 08:31:26 UTC', 'michael', '2015-03-29 08:41:26', 499495288)
+  [1m[36m (3.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "challenges"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "challenges" ("title", "task", "created_at", "user", "updated_at", "id") VALUES ('aa', 'I just ate an orange!', '2015-03-29 08:31:26 UTC', 'michael', '2015-03-29 08:41:26', 499495288)
+SQLite3::SQLException: table challenges has no column named user: INSERT INTO "challenges" ("title", "task", "created_at", "user", "updated_at", "id") VALUES ('aa', 'I just ate an orange!', '2015-03-29 08:31:26 UTC', 'michael', '2015-03-29 08:41:26', 499495288)
+  [1m[36m (5.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "challenges"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "challenges" ("title", "task", "created_at", "user", "updated_at", "id") VALUES ('aa', 'I just ate an orange!', '2015-03-29 08:31:26 UTC', 'michael', '2015-03-29 08:41:26', 499495288)
+SQLite3::SQLException: table challenges has no column named user: INSERT INTO "challenges" ("title", "task", "created_at", "user", "updated_at", "id") VALUES ('aa', 'I just ate an orange!', '2015-03-29 08:31:26 UTC', 'michael', '2015-03-29 08:41:26', 499495288)
+  [1m[36m (3.8ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "challenges"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "challenges" ("title", "task", "created_at", "user", "updated_at", "id") VALUES ('aa', 'I just ate an orange!', '2015-03-29 08:31:26 UTC', 'michael', '2015-03-29 08:41:26', 499495288)
+SQLite3::SQLException: table challenges has no column named user: INSERT INTO "challenges" ("title", "task", "created_at", "user", "updated_at", "id") VALUES ('aa', 'I just ate an orange!', '2015-03-29 08:31:26 UTC', 'michael', '2015-03-29 08:41:26', 499495288)
+  [1m[36m (2.8ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "challenges"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "challenges" ("title", "task", "created_at", "user", "updated_at", "id") VALUES ('aa', 'I just ate an orange!', '2015-03-29 08:31:26 UTC', 'michael', '2015-03-29 08:41:26', 499495288)
+SQLite3::SQLException: table challenges has no column named user: INSERT INTO "challenges" ("title", "task", "created_at", "user", "updated_at", "id") VALUES ('aa', 'I just ate an orange!', '2015-03-29 08:31:26 UTC', 'michael', '2015-03-29 08:41:26', 499495288)
+  [1m[36m (5.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "challenges"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "challenges" ("title", "task", "created_at", "user", "updated_at", "id") VALUES ('aa', 'I just ate an orange!', '2015-03-29 08:31:26 UTC', 'michael', '2015-03-29 08:41:26', 499495288)
+SQLite3::SQLException: table challenges has no column named user: INSERT INTO "challenges" ("title", "task", "created_at", "user", "updated_at", "id") VALUES ('aa', 'I just ate an orange!', '2015-03-29 08:31:26 UTC', 'michael', '2015-03-29 08:41:26', 499495288)
+  [1m[36m (2.8ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "challenges"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "challenges" ("title", "task", "created_at", "user", "updated_at", "id") VALUES ('aa', 'I just ate an orange!', '2015-03-29 08:31:26 UTC', 'michael', '2015-03-29 08:41:26', 499495288)
+SQLite3::SQLException: table challenges has no column named user: INSERT INTO "challenges" ("title", "task", "created_at", "user", "updated_at", "id") VALUES ('aa', 'I just ate an orange!', '2015-03-29 08:31:26 UTC', 'michael', '2015-03-29 08:41:26', 499495288)
+  [1m[36m (2.7ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "challenges"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "challenges" ("title", "task", "created_at", "user", "updated_at", "id") VALUES ('aa', 'I just ate an orange!', '2015-03-29 08:31:26 UTC', 'michael', '2015-03-29 08:41:26', 499495288)
+SQLite3::SQLException: table challenges has no column named user: INSERT INTO "challenges" ("title", "task", "created_at", "user", "updated_at", "id") VALUES ('aa', 'I just ate an orange!', '2015-03-29 08:31:26 UTC', 'michael', '2015-03-29 08:41:26', 499495288)
+  [1m[36m (4.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "challenges"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "challenges" ("title", "task", "created_at", "user", "updated_at", "id") VALUES ('aa', 'I just ate an orange!', '2015-03-29 08:31:26 UTC', 'michael', '2015-03-29 08:41:26', 499495288)
+SQLite3::SQLException: table challenges has no column named user: INSERT INTO "challenges" ("title", "task", "created_at", "user", "updated_at", "id") VALUES ('aa', 'I just ate an orange!', '2015-03-29 08:31:26 UTC', 'michael', '2015-03-29 08:41:26', 499495288)
+  [1m[36m (2.8ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "challenges"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "challenges" ("title", "task", "created_at", "user", "updated_at", "id") VALUES ('aa', 'I just ate an orange!', '2015-03-29 08:31:26 UTC', 'michael', '2015-03-29 08:41:26', 499495288)
+SQLite3::SQLException: table challenges has no column named user: INSERT INTO "challenges" ("title", "task", "created_at", "user", "updated_at", "id") VALUES ('aa', 'I just ate an orange!', '2015-03-29 08:31:26 UTC', 'michael', '2015-03-29 08:41:26', 499495288)
+  [1m[36m (2.9ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "challenges"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "challenges" ("title", "task", "created_at", "user", "updated_at", "id") VALUES ('aa', 'I just ate an orange!', '2015-03-29 08:31:26 UTC', 'michael', '2015-03-29 08:41:26', 499495288)
+SQLite3::SQLException: table challenges has no column named user: INSERT INTO "challenges" ("title", "task", "created_at", "user", "updated_at", "id") VALUES ('aa', 'I just ate an orange!', '2015-03-29 08:31:26 UTC', 'michael', '2015-03-29 08:41:26', 499495288)
+  [1m[36m (2.8ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "challenges"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "challenges" ("title", "task", "created_at", "user", "updated_at", "id") VALUES ('aa', 'I just ate an orange!', '2015-03-29 08:31:26 UTC', 'michael', '2015-03-29 08:41:26', 499495288)
+SQLite3::SQLException: table challenges has no column named user: INSERT INTO "challenges" ("title", "task", "created_at", "user", "updated_at", "id") VALUES ('aa', 'I just ate an orange!', '2015-03-29 08:31:26 UTC', 'michael', '2015-03-29 08:41:26', 499495288)
+  [1m[36m (5.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "challenges"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "challenges" ("title", "task", "created_at", "user", "updated_at", "id") VALUES ('aa', 'I just ate an orange!', '2015-03-29 08:31:26 UTC', 'michael', '2015-03-29 08:41:26', 499495288)
+SQLite3::SQLException: table challenges has no column named user: INSERT INTO "challenges" ("title", "task", "created_at", "user", "updated_at", "id") VALUES ('aa', 'I just ate an orange!', '2015-03-29 08:31:26 UTC', 'michael', '2015-03-29 08:41:26', 499495288)
+  [1m[36m (3.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "challenges"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "challenges" ("title", "task", "created_at", "user", "updated_at", "id") VALUES ('aa', 'I just ate an orange!', '2015-03-29 08:31:26 UTC', 'michael', '2015-03-29 08:41:26', 499495288)
+SQLite3::SQLException: table challenges has no column named user: INSERT INTO "challenges" ("title", "task", "created_at", "user", "updated_at", "id") VALUES ('aa', 'I just ate an orange!', '2015-03-29 08:31:26 UTC', 'michael', '2015-03-29 08:41:26', 499495288)
+  [1m[36m (2.9ms)[0m  [1mrollback transaction[0m

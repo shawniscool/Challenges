@@ -1,8 +1,7 @@
 class User < ActiveRecord::Base
-  has_many :challenges
-  has_many :relationships, class_name: "Relationship", 
-              foreign_key: "user_id",dependent: :destroy
-  
+  has_many :relationships
+  has_many :challenges, through: :relationships
+
 	before_save { self.email = email.downcase }
 	validates :name,  presence: true, length: { maximum: 50 }
   	VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
