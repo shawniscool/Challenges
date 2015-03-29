@@ -1,10 +1,12 @@
-<li><%= challenge.title %><%= challenge.task %>
-<%= challenge.users.count %><span>End Date is <%= challenge.endDate %> </span>
-  <span>Amount is <%= challenge.money %> </span>
-  <span class="timestamp">
-    Posted <%= time_ago_in_words(challenge.created_at) %> ago.
-    <% challenge.users.each do |user| %>
-      <%= gravatar_for user %>
-    <% end %>
-  </span>
-</li>
+<div class="event">
+      <%= gravatar_for challenge.users.first %>
+      <span class="event-detail"> <%= challenge.task %></span> 
+      <div class="event-meta">
+          <span class="money"><%= challenge.money %> </span>
+          <span class="date">3 days left</span>
+          <span class="progress">Completed 3/20 days</span>
+      </div>
+      <% challenge.users.each do |user| %>
+        <%= gravatar_for user %>
+      <% end %>
+</div><div style="clear:both"></div><br><br>

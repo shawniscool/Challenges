@@ -7,7 +7,10 @@ Rails.application.routes.draw do
   post   'login'   => 'sessions#create'
   delete 'logout'  => 'sessions#destroy'
   get 'auth/:provider/callback', to: 'sessions#create'
+<<<<<<< HEAD
   get 'logout', to: 'sessions#destroy'
+=======
+>>>>>>> fb-login
   resources :users
   resources :challenges,          only: [:new, :create, :destroy]
   # resources :challenges
