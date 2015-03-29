@@ -8,6 +8,7 @@ class ChallengesController < ApplicationController
 
   def create
   	@challenge = current_user.challenges.build(challenge_params)
+    @challenges.users << current_user
   	if @challenge.save
   		flash[:success] = "Challenge posted"
   		redirect_to root_url

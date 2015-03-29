@@ -1,15 +1,10 @@
-<li id="challenge-<%= challenge.id %>">
-  <%= gravatar_for challenge.user %>
-  <span class="user"><%= link_to challenge.user.name, challenge.user %></span>
-  <span class="title"><%= challenge.title %></span>
-  <span class="task"><%= challenge.task %></span>
-  <span>End Date is <%= challenge.endDate %> </span>
+<li><%= challenge.title %><%= challenge.task %>
+<%= challenge.users.count %><span>End Date is <%= challenge.endDate %> </span>
   <span>Amount is <%= challenge.money %> </span>
   <span class="timestamp">
     Posted <%= time_ago_in_words(challenge.created_at) %> ago.
-    <% if current_user?(challenge.user) %>
-      <%= link_to "delete", challenge, method: :delete,
-                                       data: { confirm: "You sure?" } %>
+    <% challenge.users.each do |user| %>
+      <%= gravatar_for user %>
     <% end %>
   </span>
 </li>
