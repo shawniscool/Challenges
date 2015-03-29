@@ -1,0 +1,146 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Newsfeed - Challenge</title>
+<script type="text/javascript" src="Resources/JS/jquery.min.js"></script>
+<script type="text/javascript" src="Resources/JS/jquery.backstretch.min.js"></script>
+<link href="style.css" rel="stylesheet" />
+<script type="text/javascript">
+$( document ).ready(function() {
+$('#sidebar-a').click(function () {
+   $('#sidebar').show();
+   $('#exit').show();
+});
+$('#exit').click(function () {
+   $('#sidebar').hide();
+   $('#exit').hide();
+   $('#add-pop').hide();
+});
+$('#add').click(function () {
+   $('#exit').show();
+   $('#add-pop').show();
+});
+
+});
+</script>
+
+</head>
+
+<body>
+<!-- add begins -->
+<div class="event" id="add-pop">
+
+    <form class="new_challenge" id="new_challenge" action="/challenges" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="Fmi8DXWj0Sa5l+UbeRzrjqHK/nbudnZZipJtI+I69Y6AGWbAnD08MhfGLvpwQfCZ4XoyV+y/XeGfXBD1CgUhag==" />
+      <input placeholder="Title" type="text" name="challenge[title]" id="challenge_title" />
+<br/>
+      <input placeholder="Challenge description" type="text" name="challenge[task]" id="challenge_task" />
+<br/>End date<br/>
+      <input type="date" name="challenge[endDate]" id="challenge_endDate"/>
+<br/>
+      <input step="any" placeholder="Money amount" type="number" name="challenge[money]" id="challenge_money" />
+<br/>
+      <input type="submit" name="commit" value="Create my challenge" class="btn btn-primary" />
+</form>
+</div>
+<!-- add ends -->
+<!-- header begins -->
+	<!-- side bar begins -->
+		<div id="sidebar">
+        
+        	<a href="#">Home</a>
+        	<a href="#">Newsfeed</a>
+        	<a href="#">Log Out</a>
+        </div>
+        <div id="exit">
+        
+        </div>
+<div id="navbar">
+
+	<a href="#" id="sidebar-a"></a> <!-- sidebar link-->
+    
+    <a href="#" id="add"></a> <!-- add link-->
+
+	<h1>Home</h1>
+</div>
+    
+    <!-- side bar ends -->
+
+<!-- header ends -->
+
+<!--
+
+----------------------------------------
+
+-->
+
+
+<!-- content begins -->
+
+	<!-- newsfeed page -->
+
+		<div id="content">
+     <!-- event starts-->   
+        	<div class="event">
+            
+            <!-- user thumnail size: 40px --><a href="#">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i> Did you...</i></a> 
+                
+                <span class="event-detail">
+                
+                Work Out Today?
+                    
+                </span>
+                
+                <input type="button" value="Yes" class="btn-yes"/>
+                <input type="button" value="No" class="btn-no"/>
+                
+                <div class="event-meta">
+                
+                	<span class="money">
+                    $100
+                    </span>
+                    
+                    <span class="date">
+                    3 days left
+                    </span>
+                    
+                    <span class="progress">
+                    Completed 3/20 days
+                    </span>
+                    
+             <!-- small user thumbnail size: 20px -->
+            	<div class="small-usericon" style="background:url(Resources/Images/user.png)"></div>
+            	<div class="small-usericon" style="background:url(Resources/Images/user.png)"></div>
+            	<div class="small-usericon" style="background:url(Resources/Images/user.png)"></div>
+
+
+                    </div>
+                
+                </div>
+            
+		<div style="clear:both"></div>
+            
+        <br/><br/>
+        <!-- event ends -->
+        
+             </div>
+       
+		</div>
+
+	<!-- newsfeed ends -->
+    
+<!-- content ends -->
+
+<!--
+
+----------------------------------------
+
+-->
+<!-- footer begins -->
+
+<!-- will give you footer later -->
+
+<!-- footer ends -->
+
+</body>
+</html>
