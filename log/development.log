@@ -35712,3 +35712,76 @@ Started GET "/assets/date1.png" for ::1 at 2015-03-29 05:41:00 -0400
 
 
 Started GET "/assets/background.png" for ::1 at 2015-03-29 05:41:00 -0400
+
+
+Started GET "/" for ::1 at 2015-03-29 05:53:58 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#home as HTML
+  [1m[35mUser Load (1.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered static_pages/home.html.erb within layouts/application (24.6ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered layouts/_header.html.erb (3.4ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 915ms (Views: 792.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/challenges-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-29 05:54:00 -0400
+
+
+Started GET "/assets/custom-046ab787394d92c3e738f03f40f0bb25.css?body=1" for ::1 at 2015-03-29 05:54:00 -0400
+
+
+Started GET "/assets/users-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-29 05:54:00 -0400
+
+
+Started GET "/assets/application-26c3ffea8654c13e8f86c5389db0ba35.css?body=1" for ::1 at 2015-03-29 05:54:00 -0400
+
+
+Started GET "/assets/static_pages-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-29 05:54:00 -0400
+
+
+Started GET "/assets/style-4b82963681b5d5a6eb45a21f1b293285.css?body=1" for ::1 at 2015-03-29 05:54:00 -0400
+
+
+Started GET "/assets/turbolinks-d9dcd5206ee131f11181e8ca09537148.js?body=1" for ::1 at 2015-03-29 05:54:00 -0400
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-03-29 05:54:00 -0400
+
+
+Started GET "/assets/jquery.backstretch.min-24da6a9b44a290ea439c06ac282920cf.js?body=1" for ::1 at 2015-03-29 05:54:00 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-03-29 05:54:00 -0400
+
+
+Started GET "/assets/challenges-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-29 05:54:00 -0400
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-29 05:54:00 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-03-29 05:54:00 -0400
+
+
+Started GET "/assets/static_pages-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-29 05:54:00 -0400
+
+
+Started GET "/assets/application-fe38e4b80df1c775ce374ac8edbd4a10.js?body=1" for ::1 at 2015-03-29 05:54:00 -0400
+
+
+Started GET "/assets/users-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-03-29 05:54:00 -0400
+
+
+Started GET "/assets/money1.png" for ::1 at 2015-03-29 05:54:00 -0400
+
+
+Started GET "/assets/background.png" for ::1 at 2015-03-29 05:54:00 -0400
+
+
+Started GET "/assets/date1.png" for ::1 at 2015-03-29 05:54:00 -0400
+
+
+Started GET "/auth/facebook" for ::1 at 2015-03-29 05:54:14 -0400
+(facebook) Request phase initiated.
