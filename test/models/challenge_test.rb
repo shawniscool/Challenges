@@ -7,9 +7,8 @@ class ChallengeTest < ActiveSupport::TestCase
   def setup
     @user = users(:michael)
     # This code is not idiomatically correct.
-    @challenge = @user.challenges.build(title: "heloo",task: "Lorem ipsum")
+    @challenge = @user.challenges.build(title: "helo",task: "Lorem ipsum")
   end
-
 
   test "should be valid" do
     assert @challenge.valid?

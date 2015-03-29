@@ -26,6 +26,13 @@ users = User.order(:created_at).take(6)
   title = "a"
   task = Faker::Lorem.sentence(5)
   endDate = Time.now
-  money =5
-  users.each { |user| user.challenges.create!(task: task, title: title, endDate:endDate , money:money, created_at:  Time.zone.now) }
+  money = 5
+  users.each do |user|
+
+    # @challenge = user.challenges.create!(task: task, title: title, endDate:endDate , money:money, created_at:  Time.zone.now)
+    # @participants = Challenge.where('user_id = ?',:challenge_id)
+    # @challenge.users << @participants
+    
+    user.challenges.create!(task: task, title: title, endDate:endDate , money:money, created_at:  Time.zone.now)
+  end
 end

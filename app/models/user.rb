@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-  has_many :challenges
+  has_and_belongs_to_many :challenges
   has_many :relationships, class_name: "Relationship", 
               foreign_key: "user_id",dependent: :destroy
   
