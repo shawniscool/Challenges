@@ -12,7 +12,8 @@ class User < ActiveRecord::Base
     validates :password, length: { minimum: 6 }
     # Returns the hash digest of the given string.
     def feed
-      Challenge.where('user_id = ?', id)
+      # Challenge.where('user_id = ?', id)
+      Challenge.all
     end
 
   def User.digest(string)

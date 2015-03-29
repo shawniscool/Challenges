@@ -11,30 +11,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150329052118) do
+ActiveRecord::Schema.define(version: 20150329085930) do
 
   create_table "challenges", force: :cascade do |t|
     t.string   "title"
     t.text     "task"
-    t.integer  "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
     t.date     "endDate"
     t.float    "money"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
-
-  add_index "challenges", ["user_id", "created_at"], name: "index_challenges_on_user_id_and_created_at"
-  add_index "challenges", ["user_id"], name: "index_challenges_on_user_id"
 
   create_table "relationships", force: :cascade do |t|
     t.integer  "user_id"
     t.integer  "challenge_id"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "relationship_date"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
   end
 
   add_index "relationships", ["challenge_id"], name: "index_relationships_on_challenge_id"
-  add_index "relationships", ["user_id", "challenge_id"], name: "index_relationships_on_user_id_and_challenge_id", unique: true
   add_index "relationships", ["user_id"], name: "index_relationships_on_user_id"
 
   create_table "users", force: :cascade do |t|
