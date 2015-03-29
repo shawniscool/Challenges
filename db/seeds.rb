@@ -22,11 +22,22 @@ User.create!(name:  "Example User",
 end
 
 users = User.order(:created_at).take(6)
-50.times do
+old_params = 1
+params = 0
+50.times do |n|
   title = "a"
   task = Faker::Lorem.sentence(5)
   endDate = Time.now
   money =5
   params = {task: task, title: title, endDate:endDate , money:money, created_at:  Time.zone.now}
-  users.each { |user| user.challenges.create!(params) }
+  name  = Faker::Name.name
+  password = 'password'
+  m = 5
+  users.each do |user|
+    m += 1
+    email = "example-#{n+100*m}@railstutorial.org"
+    user.challenges.create!(params)
+    user.challenges.first.users.create!({name: name, email: email,password:password,
+               password_confirmation: password})
+  end
 end

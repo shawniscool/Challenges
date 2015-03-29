@@ -3,8 +3,12 @@
 	<a href="/">About</a>
 	<a href="/">Contact</a>
 	<a href="/">FAQs</a>
-	<a href="/">Sign Up</a>
-	<a href="/">Log In</a>
+	<% if logged_in? %>
+      <%= link_to "LOG OUT", logout_path, method: "delete" %>
+    <% else %>
+      <%= link_to "SIGN UP", signup_path %>
+      <%= link_to "LOG IN", login_path %>
+    <% end %>
 	<div id="footer-logo"></div>
 <div style="clear:both"></div>
 </div>
