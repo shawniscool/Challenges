@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base
   has_many :challenges
-  
+  has_many :relationships, class_name: "Relationship", 
+              foreign_key: "user_id",dependent: :destroy
   
 	before_save { self.email = email.downcase }
 	validates :name,  presence: true, length: { maximum: 50 }
