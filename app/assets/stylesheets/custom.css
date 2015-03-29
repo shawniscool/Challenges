@@ -63,7 +63,7 @@ input{
 }
 /* new style sheet*/
 #navbar{
-	height:110px;
+	height:90px;
 	padding-top:25px;
 	background:#333;
 	color:white;
@@ -147,16 +147,15 @@ background-color: rgba(0,0,0,0.5);
 #add{
 	background:url(/assets/add.png);
 	width:87px;
-	height:85px;
+	height:84px;
 	position:absolute;
 	right:54px;
-	top:92px
+	top:62px
 }
 #add-pop{
 	position:absolute;top:20%;z-index:1000;left:15%;display:none;text-align:center;padding-top:40px;
 	font-size:14px
 }
-
 .usericon{
 	width: 50px;
 	height: 50px;
@@ -177,6 +176,41 @@ background-color: rgba(0,0,0,0.5);
 	background-position:center;
 	background-repeat:no-repeat;
 	float:left;
-	margin-left:5px
+	margin-left:10px
 }
-/* new style sheet ends */
+.btn-yes{
+	background:#2C9DDE;
+	color:white;
+	width:90px;
+	padding:2px;
+	margin-left:20px;
+	font-size:14px;
+	border:none;
+	margin-bottom:0;
+	cursor:pointer
+}
+.btn-no{
+	color:black;
+	width:90px;
+	padding:2px;
+	margin-left:20px;
+	font-size:14px;
+	border:none;
+	margin-bottom:0;
+	cursor:pointer
+}
+#sidebar a{
+	border-bottom:1px #E6E6E6 solid;
+	padding:20px 0 20px 20px;
+	width:280;
+	display:block;
+	font-weight:normal;
+	color:#666;
+}
+#sidebar a:hover{
+	background:#E1E1E1;
+}
+
+.edit_user{
+	text-align: center;
+}

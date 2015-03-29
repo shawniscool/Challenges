@@ -1,10 +1,20 @@
 <div id="content">
 <div class="event">
       
+<% if current_user?(challenge.users.first) %>
+<span> Did you ...  </span>
+<% else %>
 <div class="usericon" style= background:url(<%= gravatar_url challenge.users.first %>)>
 </div>
-      <%= link_to challenge.users.first.name, challenge.users.first %>
+<%= link_to challenge.users.first.name, challenge.users.first %>
+
+<% end %>
       <span class="event-detail"> <%= challenge.task %></span> 
+      <% if current_user?(challenge.users.first) %>
+      <br>
+        <input type="button" value="Yes" class="btn-yes"/>
+          <input type="button" value="No" class="btn-no"/>
+      <% end %>
       <div class="event-meta">
           <span class="money"><%= challenge.money %> </span>
           <span class="date">3 days left</span>

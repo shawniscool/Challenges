@@ -3,12 +3,8 @@ class SessionsController < ApplicationController
   end
   
   def create
-    # puts params[:session]
-    if params[:session].nil?
-      user = User.omniauth(env['omniauth.auth'])
-    else
+      # user = User.omniauth(env['omniauth.auth'])
   	 user = User.find_by(email: params[:session][:email].downcase)
-    end
     if user && user.authenticate(params[:session][:password])
       # Log the user in and redirect to the user's show page.
       log_in user

@@ -1,6 +1,4 @@
-<%= render 'layouts/header' %>
-<%= @user.name %>, <%= @user.email %>
-<%= gravatar_for @user %>
+<%= render 'layouts/secondheader' %>
 <div class="col-md-8">
     <% if @user.challenges.any? %>
       <h3>Challenges (<%= @user.challenges.count %>)</h3>
