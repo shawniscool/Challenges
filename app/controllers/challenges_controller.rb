@@ -2,6 +2,10 @@ class ChallengesController < ApplicationController
   before_action :logged_in_user, only: [:create, :destroy]
   before_action :correct_user,   only: :destroy
 
+  def new
+    @challenge = current_user.challenges.new
+  end
+
   def create
   	@challenge = current_user.challenges.build(challenge_params)
   	if @challenge.save

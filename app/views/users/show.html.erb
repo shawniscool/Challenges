@@ -1,4 +1,5 @@
 <%= @user.name %>, <%= @user.email %>
+<%= gravatar_for @user %>
 <div class="col-md-8">
     <% if @user.challenges.any? %>
       <h3>Challenges (<%= @user.challenges.count %>)</h3>

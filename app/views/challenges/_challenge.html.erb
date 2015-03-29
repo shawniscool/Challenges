@@ -1,4 +1,5 @@
 <li id="challenge-<%= challenge.id %>">
+  <%= gravatar_for challenge.user %>
   <span class="user"><%= link_to challenge.user.name, challenge.user %></span>
   <span class="title"><%= challenge.title %></span>
   <span class="task"><%= challenge.task %></span>
