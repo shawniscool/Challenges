@@ -3,7 +3,6 @@
 
 html, body{
 	padding:0;
-	color:black;
 	font-family: 'Open Sans', sans-serif;
 	font-size:14px;
 	margin:0;
@@ -62,3 +61,96 @@ input{
 	background-color:#3F9FDC;
 	border:1px #3F9FDC solid;
 }
+/* new style sheet*/
+#navbar{
+	height:110px;
+	padding-top:25px;
+	background:#333;
+	color:white;
+}
+#navbar h1{
+	font-weight:300;
+	margin:0;
+	font-size:52px;
+}
+#sidebar-a{
+	width:126px;
+	height:80px;
+	background:url(Resources/Images/menu.png) center center no-repeat;
+	float:left
+}
+#content{
+	width:784px;
+	margin:33px auto 33px auto;
+}
+.event{
+	border:1px #DBDBEA solid;
+	border-radius:3px;
+	background:#FAFAFA;
+	box-shadow:0px 0px 2px #B9B9C8;
+	padding:18px 22px 16px 22px;
+	width:748px;
+	height:76px;
+	font-size:24px;
+	color:858593
+}
+.event-detail{
+	color:#858593;
+}
+.event-meta{
+	color:#858593;
+	font-size:18px;
+	margin-top:14px;
+	margin-left:63px;
+}
+.event a{
+	color:black
+}
+.event img{
+	float:left;
+	margin-right:13px
+}
+#sidebar{
+	position:absolute;
+	height:100%;
+	width:300px;
+	border-right:1px #CCCDDB solid;
+	background:white;
+	z-index:999;
+	display:none;
+}
+
+#exit{
+	position:absolute;
+	height:100%;
+	width:100%;
+	background:none;
+	z-index:998;
+	display:none;
+}
+.money{
+	background:url(Resources/Images/s-money.png) left center no-repeat;
+	padding-left:28px;
+	float:left;
+}
+.date{
+	background:url(Resources/Images/s-date.png) left center no-repeat;
+	padding-left:28px;
+	float:left;
+	margin-left:29px;
+}
+.progress{
+	background:url(Resources/Images/s-process.png) left center no-repeat;
+	padding-left:28px;
+	float:left;
+	margin-left:29px;
+}
+#add{
+	background:url(Resources/Images/add.png);
+	width:87px;
+	height:85px;
+	position:absolute;
+	right:54px;
+	top:92px;
+}
+/* new style sheet ends */
