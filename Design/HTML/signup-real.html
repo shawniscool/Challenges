@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Sign Up - Challenge</title>
+<script type="text/javascript" src="Resources/JS/jquery.min.js"></script>
+<script type="text/javascript" src="Resources/JS/jquery.backstretch.min.js"></script>
+<link href="style.css" rel="stylesheet" />
+<script type="text/javascript">
+$( document ).ready(function() {
+$('input:text').focus(
+    function(){
+        $(this).val('');
+    });});
+</script>
+
+
+</head>
+
+<body>
+<div id="log-in-sign-up">
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <form class="new_user" id="new_user" action="/users" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="2gPWPL65f8XNskW2SPPgQJPVQc4vHOap93u2BF/NJmBMcgzxVyeS0WPjjldBrvtX02WN7y3VzRHitcvSt/LyhA==" />
+   	  
+      <input type="text" name="user[name]" id="user_name" placeholder="Username" />
+
+      <input type="email" name="user[email]" id="user_email" placeholder="Email" />
+
+      <input type="password" name="user[password]" id="user_password" placeholder="Password"  />
+
+      <input type="password" name="user[password_confirmation]" id="user_password_confirmation" placeholder="Enter Password Again" />
+
+      <input type="submit" name="commit" value="Create my account" class="btn btn-primary" />
+</form>  </div></div>
+
+</div>
+<div style="clear:both"></div>
+<div id="footer">
+	<a href="/">About</a>
+	<a href="/">Contact</a>
+	<a href="/">FAQs</a>
+	<a href="/">Sign Up</a>
+	<a href="/">Log In</a>
+	<div id="footer-logo"></div>
+    
+<div style="clear:both"></div>
+</div>
+
+</body>
+</html>
