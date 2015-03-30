@@ -22,7 +22,8 @@ a{
 	left:50%;
 	margin:-172px 0 0 -302px;
 	padding-left:295px;
-	background:image-url("right-glow.png") left top no-repeat;
+	/*changed*/
+	background-image:image-url("right-glow.png") left top no-repeat;
 }
 #footer{
 	height:92px;
@@ -32,7 +33,8 @@ a{
 	width:100%;
 }
 #footer-logo{
-	background:url(/assets/bottom-logo.png) right top no-repeat;
+	/*changed*/
+	background-image:image-url("bottom-logo.png") right top no-repeat;
 	float:right;
 	margin:28px 34px 0 0;
 	width:180px;
