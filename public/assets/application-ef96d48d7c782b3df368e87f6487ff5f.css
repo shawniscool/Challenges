@@ -1,0 +1,402 @@
+/* CSS Document */
+/* line 4, /Users/xiangpan/Documents/px/Programming/GitHub/HackPSU/app/assets/stylesheets/custom.css.scss */
+html, body {
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  font-weight: 300;
+  background: white;
+}
+
+/* line 14, /Users/xiangpan/Documents/px/Programming/GitHub/HackPSU/app/assets/stylesheets/custom.css.scss */
+a {
+  text-decoration: none;
+}
+
+/* line 17, /Users/xiangpan/Documents/px/Programming/GitHub/HackPSU/app/assets/stylesheets/custom.css.scss */
+#log-in-sign-up {
+  width: 313px;
+  height: 344px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin: -172px 0 0 -302px;
+  padding-left: 295px;
+  background: url(/assets/right-glow-1b0598304ea762f3ca203b2180571669.png) left top no-repeat;
+}
+
+/* line 27, /Users/xiangpan/Documents/px/Programming/GitHub/HackPSU/app/assets/stylesheets/custom.css.scss */
+#footer {
+  height: 92px;
+  bottom: 0;
+  position: fixed;
+  background: #333333;
+  width: 100%;
+}
+
+/* line 34, /Users/xiangpan/Documents/px/Programming/GitHub/HackPSU/app/assets/stylesheets/custom.css.scss */
+#footer-logo {
+  background: url(/assets/bottom-logo.png) right top no-repeat;
+  float: right;
+  margin: 28px 34px 0 0;
+  width: 180px;
+  height: 33px;
+}
+
+/* line 41, /Users/xiangpan/Documents/px/Programming/GitHub/HackPSU/app/assets/stylesheets/custom.css.scss */
+#footer a {
+  float: left;
+  margin: 36px 0 0 29px;
+  color: white;
+  font-size: 14px;
+}
+
+/* line 47, /Users/xiangpan/Documents/px/Programming/GitHub/HackPSU/app/assets/stylesheets/custom.css.scss */
+input {
+  border: 1px #B9B9C8 solid;
+  border-radius: 4px;
+  padding: 4px 0 0 8px;
+  width: 264px;
+  height: 35px;
+  font-size: 15px;
+  color: black;
+  margin-bottom: 20px;
+}
+
+/* line 57, /Users/xiangpan/Documents/px/Programming/GitHub/HackPSU/app/assets/stylesheets/custom.css.scss */
+.btn-primary {
+  cursor: pointer;
+  padding-bottom: 4px;
+  color: white;
+  background-color: #3F9FDC;
+  border: 1px #3F9FDC solid;
+}
+
+/* new style sheet*/
+/* line 65, /Users/xiangpan/Documents/px/Programming/GitHub/HackPSU/app/assets/stylesheets/custom.css.scss */
+#navbar {
+  height: 90px;
+  padding-top: 25px;
+  background: #333;
+  color: white;
+}
+
+/* line 71, /Users/xiangpan/Documents/px/Programming/GitHub/HackPSU/app/assets/stylesheets/custom.css.scss */
+#navbar h1 {
+  font-weight: 300;
+  margin: 0;
+  font-size: 52px;
+}
+
+/* line 76, /Users/xiangpan/Documents/px/Programming/GitHub/HackPSU/app/assets/stylesheets/custom.css.scss */
+#sidebar-a {
+  width: 126px;
+  height: 80px;
+  background: url(/assets/menu.png) center center no-repeat;
+  float: left;
+}
+
+/* line 82, /Users/xiangpan/Documents/px/Programming/GitHub/HackPSU/app/assets/stylesheets/custom.css.scss */
+#content {
+  width: 784px;
+  margin: 33px auto 33px auto;
+}
+
+/* line 86, /Users/xiangpan/Documents/px/Programming/GitHub/HackPSU/app/assets/stylesheets/custom.css.scss */
+.event {
+  border: 1px #DBDBEA solid;
+  border-radius: 3px;
+  background: #FAFAFA;
+  box-shadow: 0px 0px 2px #B9B9C8;
+  padding: 18px 22px 46px 22px;
+  width: 748px;
+  font-size: 24px;
+  color: 858593;
+}
+
+/* line 96, /Users/xiangpan/Documents/px/Programming/GitHub/HackPSU/app/assets/stylesheets/custom.css.scss */
+.event-detail {
+  color: #858593;
+}
+
+/* line 99, /Users/xiangpan/Documents/px/Programming/GitHub/HackPSU/app/assets/stylesheets/custom.css.scss */
+.event-meta {
+  color: #858593;
+  font-size: 18px;
+  margin-top: 14px;
+  margin-left: 63px;
+}
+
+/* line 105, /Users/xiangpan/Documents/px/Programming/GitHub/HackPSU/app/assets/stylesheets/custom.css.scss */
+.event a {
+  color: black;
+}
+
+/* line 108, /Users/xiangpan/Documents/px/Programming/GitHub/HackPSU/app/assets/stylesheets/custom.css.scss */
+.event img {
+  float: left;
+  margin-right: 13px;
+}
+
+/* line 112, /Users/xiangpan/Documents/px/Programming/GitHub/HackPSU/app/assets/stylesheets/custom.css.scss */
+#sidebar {
+  position: absolute;
+  height: 100%;
+  width: 300px;
+  border-right: 1px #CCCDDB solid;
+  background: white;
+  z-index: 999;
+  display: none;
+}
+
+/* line 122, /Users/xiangpan/Documents/px/Programming/GitHub/HackPSU/app/assets/stylesheets/custom.css.scss */
+#exit {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 998;
+  display: none;
+}
+
+/* line 130, /Users/xiangpan/Documents/px/Programming/GitHub/HackPSU/app/assets/stylesheets/custom.css.scss */
+.money {
+  background: url(/assets/s-money.png) left center no-repeat;
+  padding-left: 28px;
+  float: left;
+}
+
+/* line 135, /Users/xiangpan/Documents/px/Programming/GitHub/HackPSU/app/assets/stylesheets/custom.css.scss */
+.date {
+  background: url(/assets/s-date.png) left center no-repeat;
+  padding-left: 28px;
+  float: left;
+  margin-left: 29px;
+}
+
+/* line 141, /Users/xiangpan/Documents/px/Programming/GitHub/HackPSU/app/assets/stylesheets/custom.css.scss */
+.progress {
+  background: url(/assets/s-process.png) left center no-repeat;
+  padding-left: 28px;
+  float: left;
+  margin-left: 29px;
+}
+
+/* line 147, /Users/xiangpan/Documents/px/Programming/GitHub/HackPSU/app/assets/stylesheets/custom.css.scss */
+#add {
+  background: url(/assets/add.png);
+  width: 87px;
+  height: 84px;
+  position: absolute;
+  right: 54px;
+  top: 62px;
+}
+
+/* line 155, /Users/xiangpan/Documents/px/Programming/GitHub/HackPSU/app/assets/stylesheets/custom.css.scss */
+#add-pop {
+  position: absolute;
+  top: 20%;
+  z-index: 1000;
+  left: 15%;
+  display: none;
+  text-align: center;
+  padding-top: 40px;
+  font-size: 14px;
+}
+
+/* line 159, /Users/xiangpan/Documents/px/Programming/GitHub/HackPSU/app/assets/stylesheets/custom.css.scss */
+.usericon {
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  background-position: center;
+  background-repeat: no-repeat;
+  float: left;
+  margin-right: 10px;
+}
+
+/* line 170, /Users/xiangpan/Documents/px/Programming/GitHub/HackPSU/app/assets/stylesheets/custom.css.scss */
+.small-usericon {
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  background-position: center;
+  background-repeat: no-repeat;
+  float: left;
+  margin-left: 10px;
+}
+
+/* line 181, /Users/xiangpan/Documents/px/Programming/GitHub/HackPSU/app/assets/stylesheets/custom.css.scss */
+.btn-yes {
+  background: #2C9DDE;
+  color: white;
+  width: 90px;
+  padding: 2px;
+  margin-left: 20px;
+  font-size: 14px;
+  border: none;
+  margin-bottom: 0;
+  cursor: pointer;
+}
+
+/* line 192, /Users/xiangpan/Documents/px/Programming/GitHub/HackPSU/app/assets/stylesheets/custom.css.scss */
+.btn-no {
+  color: black;
+  width: 90px;
+  padding: 2px;
+  margin-left: 20px;
+  font-size: 14px;
+  border: none;
+  margin-bottom: 0;
+  cursor: pointer;
+}
+
+/* line 202, /Users/xiangpan/Documents/px/Programming/GitHub/HackPSU/app/assets/stylesheets/custom.css.scss */
+#sidebar a {
+  border-bottom: 1px #E6E6E6 solid;
+  padding: 20px 0 20px 20px;
+  width: 280;
+  display: block;
+  font-weight: normal;
+  color: #666;
+}
+
+/* line 210, /Users/xiangpan/Documents/px/Programming/GitHub/HackPSU/app/assets/stylesheets/custom.css.scss */
+#sidebar a:hover {
+  background: #E1E1E1;
+}
+
+/* line 214, /Users/xiangpan/Documents/px/Programming/GitHub/HackPSU/app/assets/stylesheets/custom.css.scss */
+.edit_user {
+  text-align: center;
+}
+/*for index.html*/
+
+
+a{
+	text-decoration:none
+}
+#h-navbar{
+	width:100%;
+	height:50px;
+	background:white url(/assets/navbar.png) bottom repeat-x;
+	padding-top:18px
+}
+#logo{
+	background:url(/assets/logo.png);
+	width:180px;
+	height:25px;
+	display:block;
+	margin:0 0 0 27px;
+}
+#nav-right{
+	float:right;
+	margin-right:50px;
+}
+#nav-right a{
+	width:88px;
+	border-radius:5px;
+	height:25px;
+	float:right;
+	margin-left:18px;
+	text-align:center;
+	padding-top:9px;
+	font-size:12px
+}
+#signup{
+	background:#DDDDDD;
+	border:1px #DDDDDD solid;
+	color:black
+}
+#login{
+	background:#2C9DDE;
+	border:1px #2C9DDE solid;
+	color:white
+}
+#img{
+	height:262px;
+	width:100%;
+	text-align:center;
+	padding-top:148px;
+	text-align:center;
+	color:white;
+}
+.h1{
+	font-size:45px;
+	margin-bottom:16px;
+}
+.h2{
+	font-size:35px;
+}
+#content{
+	text-align:center;
+	padding-top:32px;
+	background:white;
+}
+.icondes{
+	margin:60px auto 0 auto;
+	width:745px;
+	margin-left:auto;
+	background:white;
+	text-align:center
+}
+.icondes-left{
+	width:321px;
+	float:left
+}
+.icondes-right{
+	width:321px;
+	float:right
+}
+#sign-up-bottom{
+	background:#3F9FDC;
+	text-align:center;
+	font-size:16px;
+	padding-top:13px;
+	height:35px;
+	color:white;
+	width:344px;
+	display:block;
+	margin:30px auto 30px auto;
+	border:1px #4DA1DA solid;
+	border-radius:8px
+}
+#footer{
+	height:92px;
+}
+#footer-logo{
+	background:url(/assets/bottom-logo.png) right center no-repeat;
+	float:right;
+	margin:28px 34px 0 0;
+	width:180px;
+	height:33px;
+}
+#footer a{
+	float:left;
+	margin:36px 0 0 29px;
+	color:white;
+	font-size:14px;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ */
+

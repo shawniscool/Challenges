@@ -24,6 +24,8 @@ a{
 	padding-left:295px;
 	/*changed*/
 	background-image:image-url("right-glow.png") left top no-repeat;
+	background-image:asset-data-url("right-glow.png") left top no-repeat;
+	background-image:url(asset-path("right-glow.png")) left top no-repeat;
 }
 #footer{
 	height:92px;
