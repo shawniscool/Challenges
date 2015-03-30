@@ -32,7 +32,7 @@ a{
 	width:100%;
 }
 #footer-logo{
-	background:image-url("bottom-logo.png") right top no-repeat;
+	background:url(/assets/bottom-logo.png) right top no-repeat;
 	float:right;
 	margin:28px 34px 0 0;
 	width:180px;
