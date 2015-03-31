@@ -14,7 +14,8 @@
 <%= render 'layouts/header' %>
 <script type="text/javascript">
 $(document ).ready(function() {
-  $("#img").backstretch(<%= image_url("background.png") %>);
+  $("#img").backstretch(<%= asset_path("background.png") %>);
+  $("#img").backstretch(<%= asset_data_uri("background.png") %>);
 });
 </script>
 <div style="clear:both"></div>
